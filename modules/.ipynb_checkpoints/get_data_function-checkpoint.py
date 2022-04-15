@@ -6,11 +6,6 @@ import numpy as np
 import os
 
 
-STRATEGY = tf.distribute.get_strategy()    
-BATCH_SIZE = 16
-IMG_SIZE = 224
-SEED = 42
-
 feature_map = {
     'image': tf.io.FixedLenFeature([], tf.string),
     'image_id': tf.io.FixedLenFeature([], tf.string),
@@ -35,7 +30,7 @@ def count_data_items(filenames):
     return np.sum([int(x[:-6].split('-')[-1]) for x in filenames])
 
 
-def decode_image(image_data):
+def decode_image(image_data, IMG_SIZE=224):
     image = tf.image.decode_jpeg(image_data, channels=1)
     image = tf.reshape(image, [IMG_SIZE, IMG_SIZE, 1])
     return image
@@ -68,14 +63,14 @@ def read_tfrecord(example):
     return image, target
 
 
-def data_augment(image, target):
+def data_augment(image, target, SEED=42):
     image = tf.image.random_flip_left_right(image, seed=SEED)
     image = tf.image.random_flip_up_down(image, seed=SEED)
     return image, target
 
 
 def get_dataset(filenames, shuffled=False, repeated=False, 
-                cached=False, augmented=False, distributed=True):
+                cached=False, augmented=False, distributed=True, STRATEGY=tf.distribute.get_strategy(), BATCH_SIZE=16, SEED=42):
     auto = tf.data.experimental.AUTOTUNE
     dataset = tf.data.TFRecordDataset(filenames, num_parallel_reads=auto)
     dataset = dataset.map(read_tfrecord, num_parallel_calls=auto)
