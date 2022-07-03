@@ -105,21 +105,3 @@ def get_model():
         metrics=tf.keras.metrics.AUC(multi_label=True))
 
     return model
-
-def get_resnet50_model():
-    model = tf.keras.models.Sequential([
-        tf.keras.applications.resnet50.ResNet50(
-            include_top=False, 
-            input_shape=(None, None, 1), 
-            weights=None,
-            pooling='avg'
-            # classes=1000,
-        ),
-        tf.keras.layers.Dense(15, activation='sigmoid')
-    ])
-    model.compile(
-        optimizer='adam',
-        loss='binary_crossentropy',
-        metrics=tf.keras.metrics.AUC(multi_label=True))
-
-    return model

@@ -3,3 +3,7 @@ dataset/ChestXray NIH.zip
 
 __pycache__
 .ipynb_checkpoints
+
+wandb
+results/models/*
+~/
