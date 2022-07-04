@@ -4,6 +4,7 @@ import tensorflow as tf
 import pandas as pd
 import numpy as np
 import os
+import matplotlib.pyplot as plt
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -44,15 +45,43 @@ def decode_image(image_data):
     image = tf.reshape(image, [IMG_SIZE, IMG_SIZE, 1])
     return image
 
+def decode_image_color(image_data):
+    image = tf.image.decode_jpeg(image_data, channels=1)
+    image = tf.image.grayscale_to_rgb(image)
+    image = tf.reshape(image, [IMG_SIZE, IMG_SIZE, 3])
+    return image
+
 
 def scale_image(image, target):
     image = tf.cast(image, tf.float32) / 255.
+    print(target)
     return image, target
 
 
 def read_tfrecord(example):
     example = tf.io.parse_single_example(example, feature_map)
     image = decode_image(example['image'])
+    target = [
+        example['No Finding'],
+        example['Atelectasis'],
+        example['Consolidation'],
+        example['Infiltration'],
+        example['Pneumothorax'],
+        example['Edema'],
+        example['Emphysema'],
+        example['Fibrosis'],
+        example['Effusion'],
+        example['Pneumonia'],
+        example['Pleural_Thickening'],
+        example['Cardiomegaly'],
+        example['Nodule'],
+        example['Mass'],
+        example['Hernia']]
+    return image, target
+
+def read_tfrecord_color(example):
+    example = tf.io.parse_single_example(example, feature_map)
+    image = decode_image_color(example['image'])
     target = [
         example['No Finding'],
         example['Atelectasis'],
@@ -79,10 +108,14 @@ def data_augment(image, target):
 
 
 def get_dataset(filenames, shuffled=False, repeated=False, 
-                cached=False, augmented=False, distributed=True):
+                cached=False, augmented=False, distributed=True, color=False):
     auto = tf.data.experimental.AUTOTUNE
     dataset = tf.data.TFRecordDataset(filenames, num_parallel_reads=auto)
-    dataset = dataset.map(read_tfrecord, num_parallel_calls=auto)
+    if color:
+        dataset = dataset.map(read_tfrecord_color, num_parallel_calls=auto)
+    else:
+        dataset = dataset.map(read_tfrecord, num_parallel_calls=auto)
+        
     if augmented:
         dataset = dataset.map(data_augment, num_parallel_calls=auto)
     dataset = dataset.map(scale_image, num_parallel_calls=auto)
@@ -96,6 +129,8 @@ def get_dataset(filenames, shuffled=False, repeated=False,
     dataset = dataset.prefetch(auto)
     if distributed:
         dataset = STRATEGY.experimental_distribute_dataset(dataset)
+        
+    print(dataset)
     return dataset
 
 
