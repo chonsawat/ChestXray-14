@@ -1,10 +1,5 @@
 """ Documations
-
-Path for each Computations:
-    Drive Chonsawat Path: 
-        input_path = "/content/drive/MyDrive/KKU /Project/Dataset/ChestXray NIH"
-    Deepnote Path: 
-        input_path = "/datasets/chonsawat-drive/KKU /Project/Dataset/ChestXray NIH"
+Path:
     Elab Path: 
         input_path = "~/ChestXray-14/dataset/ChestXray NIH"
 """
@@ -15,7 +10,6 @@ import tensorflow as tf
 import pandas as pd
 import numpy as np
 import os
-
 
 # ChestXray Required Modules
 from utils import *
@@ -56,8 +50,8 @@ def get_resnet50_model():
         tf.keras.applications.resnet50.ResNet50(
             include_top=False, 
             input_shape=(None, None, 3),  # new dataset is grey-scale image
-            weights='imagenet',
-            pooling='avg',
+            weights=None,
+            pooling='avg'
         ),
         tf.keras.layers.Dense(15, activation='sigmoid')  # 15 Output for new datasets
     ])
@@ -81,40 +75,36 @@ if tf.test.gpu_device_name():
     val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
 
-    # steps_per_epoch = count_data_items(train_filenames) // BATCH_SIZE
-    # validation_steps = count_data_items(val_filenames) // BATCH_SIZE
-
     train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
-    val_dataset = get_dataset(val_filenames, cached=True, color=True) # color=True
-    
+    val_dataset = get_dataset(val_filenames, cached=True, color=True)
+
     # =========== Weight & Bias ==============
     run = wandb.init(project="ChestXray",
                     config = {
                       "epochs": 20,
                       "batch_size": BATCH_SIZE,
+                      "loss_function": "binary_crossentropy"
                     })
     config = wandb.config
-
+    # ========================================
+    
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
         model = get_resnet50_model()
         
         model.compile(
             optimizer='adam',
-            loss="binary_crossentropy",
+            loss=config.loss_function,
             metrics=tf.keras.metrics.AUC(multi_label=True))
 
     history = model.fit(
         train_dataset,
-        epochs=20,
-        # steps_per_epoch=steps_per_epoch,
+        epochs=config.epochs,
         validation_data=val_dataset,
-        # validation_steps=validation_steps,
         verbose=1,
-        callbacks=[WandbCallback()]
-    )
+        callbacks=[WandbCallback()]) # Callback API to Weight & Bias
 
-    model.save(f"~/ChestXray-14/results/models/Resnet50_epochs-{20}.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/Resnet50_RGB_epochs-{config.epochs}.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================
