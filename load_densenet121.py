@@ -89,6 +89,8 @@ if tf.test.gpu_device_name():
 
 
     model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_epochs-20.h5")
+    print("Saved")
+    os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================
