@@ -86,6 +86,7 @@ if tf.test.gpu_device_name():
         # TODO: Restore model
         best_model = wandb.restore('model-best.h5', run_path='chestxray/ChestXray/3mh42m31')
         model.load_weights(best_model.name)
+        os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 
 
     model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_epochs-20.h5")

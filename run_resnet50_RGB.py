@@ -105,6 +105,7 @@ if tf.test.gpu_device_name():
         callbacks=[WandbCallback()]) # Callback API to Weight & Bias
 
     model.save(f"/home/jovyan/ChestXray-14/results/models/Resnet50_RGB_epochs-{config.epochs}.h5")
+    print("Saved")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================
