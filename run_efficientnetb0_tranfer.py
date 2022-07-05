@@ -89,7 +89,7 @@ if tf.test.gpu_device_name():
         verbose=1,
         callbacks=[WandbCallback()])
 
-    model.save(f"~/ChestXray-14/results/models/EfficientNetB0_tranfer_epochs-{config.epochs}.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/EfficientNetB0_tranfer_epochs-{config.epochs}.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================
