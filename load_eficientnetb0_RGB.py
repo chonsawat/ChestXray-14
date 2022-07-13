@@ -1,3 +1,8 @@
+""" Documations
+Path:
+    Elab Dataset Path: 
+        input_path = "~/ChestXray-14/dataset/ChestXray NIH"
+"""
 # Modules
 from sklearn.utils import shuffle
 from tqdm.notebook import tqdm
@@ -17,6 +22,7 @@ from wandb.keras import WandbCallback
 import warnings
 warnings.filterwarnings('ignore')
 
+
 # ========= Check GPU ==============
 print('Using tensorflow %s' % tf.__version__)
 if tf.test.gpu_device_name():
@@ -25,27 +31,17 @@ else:
     print("Please install GPU version of TF")
 print("\n")
 
-
 # ============ Function =============
 def get_model():
     model = tf.keras.models.Sequential([
         tf.keras.applications.EfficientNetB0(
             include_top=False,
             input_shape=(None, None, 3),
-            weights='imagenet',
+            weights=None,
             pooling='avg'),
         tf.keras.layers.Dense(15, activation='sigmoid')
     ])
     return model
-
-# =========== Weight & Bias ==============
-run = wandb.init(project="ChestXray",
-                config = {
-                  "epochs": 20,
-                  "batch_size": BATCH_SIZE,
-                  "loss_function": "binary_crossentropy"
-                })
-config = wandb.config
 
 
 # =========== Declare Variable ==============
@@ -61,35 +57,26 @@ if tf.test.gpu_device_name():
     """
     Check if a GPU is none it's will terminate programs.
     """
-    train_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/train/*.tfrec')
-    val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
+
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
-
-    # steps_per_epoch = count_data_items(train_filenames) // BATCH_SIZE
-    # validation_steps = count_data_items(val_filenames) // BATCH_SIZE
-
-    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
-    val_dataset = get_dataset(val_filenames, cached=True, color=True)
 
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
         model = get_model()
-        
+
         model.compile(
             optimizer='adam',
-            loss=config.loss_function,
+            loss='binary_crossentropy',
             metrics=tf.keras.metrics.AUC(multi_label=True))
+        
+        # TODO: Restore model
+        best_model = wandb.restore('model-best.h5', run_path='chestxray/ChestXray/j10uebg2')
+        model.load_weights(best_model.name)
 
-    history = model.fit(
-        train_dataset,
-        epochs=config.epochs,
-        # steps_per_epoch=steps_per_epoch,
-        validation_data=val_dataset,
-        # validation_steps=validation_steps,
-        verbose=1,
-        callbacks=[WandbCallback()])
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/EfficientNetB0_tranfer_epochs-{config.epochs}.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/EfficientNetB0_RGB_epochs-20.h5")
+    print("Saved")
+    os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================

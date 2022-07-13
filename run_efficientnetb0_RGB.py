@@ -68,8 +68,8 @@ if tf.test.gpu_device_name():
     # steps_per_epoch = count_data_items(train_filenames) // BATCH_SIZE
     # validation_steps = count_data_items(val_filenames) // BATCH_SIZE
 
-    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False)
-    val_dataset = get_dataset(val_filenames, cached=True)
+    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
+    val_dataset = get_dataset(val_filenames, cached=True, color=True)
 
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
