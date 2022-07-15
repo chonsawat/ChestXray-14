@@ -17,7 +17,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.get_data_function import *
 
 # Weight & Bias
 import wandb
