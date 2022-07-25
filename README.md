@@ -1,5 +1,5 @@
 # ChestXray-14
-*Predict Abnormal Chest with Multi-Label Classification on Chest X-rayPredict Abnormal Chest with Multi-Label Classification on Chest X-ray* <br>
+*Predict Abnormal Chest with Multi-Label Classification on Chest X-ray* <br>
 Since: Jul 2021 - Present
 
 **Collaborators** <br>
