@@ -1,0 +1,802 @@
+,classes
+No Finding,60361
+Infiltration,9547
+Atelectasis,4215
+Effusion,3955
+Nodule,2705
+Pneumothorax,2194
+Mass,2139
+"Effusion, Infiltration",1604
+"Atelectasis, Infiltration",1350
+Consolidation,1310
+"Atelectasis, Effusion",1167
+Pleural_Thickening,1126
+Cardiomegaly,1093
+Emphysema,892
+"Infiltration, Nodule",829
+"Atelectasis, Effusion, Infiltration",739
+Fibrosis,727
+Edema,628
+"Cardiomegaly, Effusion",484
+"Infiltration, Consolidation",441
+"Infiltration, Mass",420
+"Effusion, Pneumothorax",403
+"Effusion, Mass",402
+"Atelectasis, Consolidation",398
+"Mass, Nodule",396
+"Infiltration, Edema",392
+"Infiltration, Pneumothorax",347
+"Effusion, Consolidation",337
+"Pneumothorax, Emphysema",337
+Pneumonia,322
+"Effusion, Pleural_Thickening",251
+"Effusion, Nodule",250
+"Atelectasis, Pneumothorax",241
+"Infiltration, Pleural_Thickening",210
+"Cardiomegaly, Infiltration",201
+"Atelectasis, Nodule",201
+"Atelectasis, Effusion, Consolidation",200
+"Infiltration, Pneumonia",199
+"Effusion, Edema",189
+"Infiltration, Fibrosis",185
+"Mass, Pneumothorax",179
+"Atelectasis, Mass",178
+"Mass, Consolidation",151
+"Nodule, Pleural_Thickening",141
+"Infiltration, Pneumonia, Edema",138
+"Effusion, Infiltration, Consolidation",134
+"Mass, Pleural_Thickening",132
+"Nodule, Pneumothorax",130
+"Nodule, Consolidation",128
+"Effusion, Infiltration, Edema",127
+"Infiltration, Emphysema",126
+"Cardiomegaly, Effusion, Infiltration",120
+"Atelectasis, Emphysema",117
+"Atelectasis, Pleural_Thickening",117
+Hernia,110
+"Atelectasis, Pneumonia",108
+"Effusion, Infiltration, Nodule",106
+"Atelectasis, Fibrosis",104
+"Atelectasis, Infiltration, Consolidation",104
+"Effusion, Infiltration, Mass",99
+"Atelectasis, Effusion, Pneumothorax",99
+"Effusion, Emphysema",96
+"Effusion, Infiltration, Pneumothorax",88
+"Atelectasis, Cardiomegaly",88
+"Pneumonia, Edema",83
+"Atelectasis, Effusion, Infiltration, Consolidation",81
+"Pneumothorax, Pleural_Thickening",79
+"Atelectasis, Infiltration, Pneumothorax",72
+"Infiltration, Pneumothorax, Emphysema",72
+"Atelectasis, Effusion, Mass",72
+"Effusion, Infiltration, Pleural_Thickening",71
+"Fibrosis, Pleural_Thickening",70
+"Atelectasis, Cardiomegaly, Effusion",68
+"Atelectasis, Infiltration, Mass",67
+"Infiltration, Mass, Nodule",67
+"Nodule, Fibrosis",66
+"Mass, Emphysema",66
+"Effusion, Mass, Consolidation",65
+"Effusion, Mass, Nodule",65
+"Effusion, Fibrosis",59
+"Atelectasis, Infiltration, Nodule",57
+"Atelectasis, Pneumothorax, Emphysema",54
+"Effusion, Pneumonia",54
+"Atelectasis, Cardiomegaly, Effusion, Infiltration",54
+"Consolidation, Edema",49
+"Pneumothorax, Consolidation",49
+"Atelectasis, Edema",48
+"Infiltration, Nodule, Consolidation",47
+"Effusion, Pneumothorax, Emphysema",47
+"Atelectasis, Effusion, Pleural_Thickening",47
+"Emphysema, Pleural_Thickening",46
+"Consolidation, Pleural_Thickening",46
+"Atelectasis, Infiltration, Pleural_Thickening",45
+"Atelectasis, Effusion, Infiltration, Pneumothorax",44
+"Atelectasis, Effusion, Nodule",43
+"Effusion, Infiltration, Pneumonia",42
+"Infiltration, Mass, Consolidation",42
+"Atelectasis, Effusion, Infiltration, Pleural_Thickening",41
+"Atelectasis, Infiltration, Emphysema",40
+"Cardiomegaly, Consolidation",40
+"Atelectasis, Effusion, Infiltration, Mass",38
+"Effusion, Mass, Pleural_Thickening",38
+"Atelectasis, Effusion, Mass, Consolidation",37
+"Pneumonia, Consolidation",36
+"Cardiomegaly, Edema",35
+"Atelectasis, Infiltration, Edema",35
+"Effusion, Pneumothorax, Pleural_Thickening",34
+"Mass, Fibrosis",34
+"Cardiomegaly, Effusion, Pleural_Thickening",34
+"Atelectasis, Infiltration, Pneumonia",34
+"Atelectasis, Mass, Consolidation",34
+"Atelectasis, Cardiomegaly, Infiltration",31
+"Infiltration, Nodule, Edema",31
+"Effusion, Nodule, Pleural_Thickening",31
+"Infiltration, Nodule, Pneumothorax",31
+"Mass, Nodule, Pleural_Thickening",30
+"Mass, Pneumothorax, Emphysema",30
+"Infiltration, Nodule, Pleural_Thickening",29
+"Nodule, Emphysema",29
+"Nodule, Edema",28
+"Effusion, Nodule, Consolidation",28
+"Atelectasis, Infiltration, Pneumothorax, Emphysema",27
+"Atelectasis, Effusion, Emphysema",26
+"Infiltration, Mass, Pleural_Thickening",25
+"Infiltration, Consolidation, Edema",25
+"Mass, Nodule, Consolidation",24
+"Atelectasis, Mass, Nodule",24
+"Effusion, Mass, Pneumothorax",24
+"Effusion, Infiltration, Emphysema",24
+"Atelectasis, Effusion, Infiltration, Edema",24
+"Consolidation, Fibrosis",24
+"Atelectasis, Pneumothorax, Consolidation",23
+"Atelectasis, Effusion, Pneumonia",23
+"Infiltration, Mass, Edema",23
+"Pneumothorax, Fibrosis",23
+"Cardiomegaly, Nodule",22
+"Atelectasis, Effusion, Edema",22
+"Effusion, Pneumothorax, Consolidation",22
+"Effusion, Infiltration, Mass, Nodule",22
+"Cardiomegaly, Effusion, Consolidation",22
+"Infiltration, Pneumothorax, Pleural_Thickening",22
+"Effusion, Infiltration, Pneumonia, Edema",21
+"Atelectasis, Effusion, Infiltration, Nodule",21
+"Atelectasis, Hernia",21
+"Atelectasis, Infiltration, Fibrosis",21
+"Infiltration, Consolidation, Pleural_Thickening",20
+"Nodule, Pneumothorax, Emphysema",20
+"Infiltration, Pneumothorax, Consolidation",20
+"Consolidation, Emphysema",20
+"Effusion, Pneumonia, Edema",19
+"Nodule, Pneumonia",19
+"Cardiomegaly, Emphysema",19
+"Atelectasis, Effusion, Infiltration, Emphysema",18
+"Cardiomegaly, Mass",18
+"Atelectasis, Effusion, Infiltration, Pneumonia",18
+"Mass, Edema",18
+"Mass, Nodule, Pneumothorax",18
+"Cardiomegaly, Effusion, Edema",18
+"Atelectasis, Pneumothorax, Pleural_Thickening",18
+"Effusion, Infiltration, Nodule, Pleural_Thickening",17
+"Atelectasis, Mass, Pneumothorax",16
+"Atelectasis, Consolidation, Pleural_Thickening",16
+"Atelectasis, Effusion, Mass, Nodule, Consolidation",16
+"Infiltration, Fibrosis, Pleural_Thickening",16
+"Effusion, Infiltration, Fibrosis",16
+"Nodule, Fibrosis, Pleural_Thickening",16
+"Infiltration, Nodule, Fibrosis",16
+"Effusion, Infiltration, Mass, Pleural_Thickening",16
+"Infiltration, Mass, Emphysema",16
+"Atelectasis, Nodule, Consolidation",16
+"Atelectasis, Effusion, Pneumothorax, Emphysema",15
+"Atelectasis, Mass, Emphysema",15
+"Effusion, Mass, Edema",15
+"Atelectasis, Effusion, Mass, Nodule",15
+"Edema, Pleural_Thickening",15
+"Effusion, Nodule, Pneumothorax",15
+"Mass, Pneumothorax, Pleural_Thickening",15
+"Atelectasis, Effusion, Fibrosis",15
+"Atelectasis, Pneumonia, Consolidation",15
+"Cardiomegaly, Effusion, Nodule",15
+"Infiltration, Mass, Pneumothorax",15
+"Infiltration, Hernia",15
+"Effusion, Infiltration, Nodule, Consolidation",15
+"Effusion, Infiltration, Mass, Consolidation",15
+"Mass, Hernia",15
+"Cardiomegaly, Effusion, Mass",14
+"Cardiomegaly, Pleural_Thickening",14
+"Infiltration, Mass, Nodule, Consolidation",13
+"Effusion, Emphysema, Pleural_Thickening",13
+"Infiltration, Pneumonia, Consolidation",13
+"Emphysema, Fibrosis",13
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Consolidation",13
+"Pneumothorax, Emphysema, Pleural_Thickening",13
+"Edema, Emphysema",13
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Consolidation",12
+"Atelectasis, Nodule, Pleural_Thickening",12
+"Effusion, Infiltration, Pneumothorax, Emphysema",12
+"Cardiomegaly, Infiltration, Consolidation",12
+"Pneumonia, Pleural_Thickening",11
+"Atelectasis, Effusion, Mass, Consolidation, Pleural_Thickening",11
+"Mass, Pneumonia",11
+"Mass, Nodule, Fibrosis",11
+"Infiltration, Nodule, Pneumonia",11
+"Effusion, Mass, Nodule, Consolidation",11
+"Cardiomegaly, Effusion, Infiltration, Nodule",11
+"Effusion, Consolidation, Edema",11
+"Effusion, Consolidation, Pleural_Thickening",11
+"Effusion, Mass, Emphysema",10
+"Atelectasis, Infiltration, Mass, Consolidation",10
+"Pneumothorax, Consolidation, Emphysema",10
+"Effusion, Nodule, Edema",10
+"Cardiomegaly, Effusion, Fibrosis",10
+"Atelectasis, Infiltration, Mass, Pleural_Thickening",10
+"Mass, Consolidation, Pleural_Thickening",10
+"Atelectasis, Cardiomegaly, Consolidation",10
+"Effusion, Pneumothorax, Fibrosis",10
+"Effusion, Infiltration, Consolidation, Pleural_Thickening",10
+"Atelectasis, Consolidation, Emphysema",10
+"Effusion, Mass, Nodule, Pneumothorax",10
+"Cardiomegaly, Effusion, Infiltration, Edema",10
+"Cardiomegaly, Infiltration, Edema",10
+"Effusion, Infiltration, Edema, Pleural_Thickening",10
+"Effusion, Infiltration, Nodule, Pneumothorax",10
+"Atelectasis, Cardiomegaly, Effusion, Consolidation",9
+"Effusion, Infiltration, Nodule, Edema",9
+"Effusion, Mass, Nodule, Pleural_Thickening",9
+"Infiltration, Pneumothorax, Fibrosis",9
+"Atelectasis, Effusion, Consolidation, Edema",9
+"Cardiomegaly, Pneumothorax",9
+"Atelectasis, Nodule, Pneumothorax",9
+"Atelectasis, Effusion, Consolidation, Pleural_Thickening",9
+"Atelectasis, Effusion, Infiltration, Mass, Nodule",9
+"Cardiomegaly, Effusion, Emphysema",9
+"Effusion, Infiltration, Mass, Pneumothorax",9
+"Atelectasis, Effusion, Nodule, Consolidation",9
+"Infiltration, Consolidation, Fibrosis",9
+"Infiltration, Mass, Pneumonia",9
+"Atelectasis, Fibrosis, Pleural_Thickening",8
+"Cardiomegaly, Effusion, Infiltration, Consolidation",8
+"Atelectasis, Nodule, Fibrosis",8
+"Infiltration, Mass, Nodule, Pneumothorax",8
+"Infiltration, Mass, Nodule, Pleural_Thickening",8
+"Atelectasis, Pneumothorax, Consolidation, Emphysema",8
+"Effusion, Infiltration, Mass, Nodule, Pleural_Thickening",8
+"Cardiomegaly, Pneumonia",8
+"Effusion, Fibrosis, Pleural_Thickening",8
+"Atelectasis, Infiltration, Mass, Nodule",8
+"Infiltration, Nodule, Emphysema",8
+"Mass, Nodule, Edema",8
+"Effusion, Pneumonia, Consolidation",8
+"Effusion, Mass, Fibrosis",8
+"Atelectasis, Infiltration, Nodule, Pneumothorax",7
+"Effusion, Infiltration, Mass, Nodule, Consolidation",7
+"Cardiomegaly, Effusion, Pneumonia",7
+"Cardiomegaly, Fibrosis",7
+"Pneumothorax, Fibrosis, Pleural_Thickening",7
+"Cardiomegaly, Infiltration, Nodule",7
+"Atelectasis, Infiltration, Mass, Fibrosis",7
+"Atelectasis, Mass, Pleural_Thickening",7
+"Atelectasis, Effusion, Infiltration, Mass, Consolidation, Pleural_Thickening",7
+"Consolidation, Fibrosis, Pleural_Thickening",7
+"Mass, Pneumothorax, Consolidation",7
+"Infiltration, Emphysema, Pleural_Thickening",7
+"Atelectasis, Effusion, Pneumothorax, Consolidation",7
+"Infiltration, Pneumonia, Edema, Pleural_Thickening",6
+"Nodule, Consolidation, Fibrosis",6
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Nodule",6
+"Atelectasis, Effusion, Nodule, Pneumothorax",6
+"Mass, Nodule, Pneumonia",6
+"Nodule, Hernia",6
+"Infiltration, Pneumothorax, Emphysema, Pleural_Thickening",6
+"Atelectasis, Infiltration, Pneumothorax, Pleural_Thickening",6
+"Atelectasis, Cardiomegaly, Fibrosis",6
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Pleural_Thickening",6
+"Mass, Nodule, Consolidation, Pleural_Thickening",6
+"Atelectasis, Consolidation, Edema",6
+"Nodule, Pneumothorax, Pleural_Thickening",6
+"Cardiomegaly, Infiltration, Pleural_Thickening",6
+"Infiltration, Mass, Pneumonia, Edema",6
+"Atelectasis, Effusion, Infiltration, Mass, Pneumothorax",6
+"Infiltration, Mass, Pneumothorax, Emphysema",6
+"Cardiomegaly, Infiltration, Fibrosis",6
+"Infiltration, Mass, Consolidation, Pleural_Thickening",6
+"Atelectasis, Infiltration, Pneumonia, Edema",6
+"Atelectasis, Effusion, Infiltration, Consolidation, Pleural_Thickening",6
+"Infiltration, Pneumonia, Pneumothorax",6
+"Nodule, Consolidation, Pleural_Thickening",6
+"Nodule, Pneumothorax, Consolidation",6
+"Pneumothorax, Edema",6
+"Atelectasis, Effusion, Consolidation, Emphysema",5
+"Effusion, Mass, Pneumothorax, Pleural_Thickening",5
+"Atelectasis, Effusion, Mass, Pleural_Thickening",5
+"Mass, Nodule, Emphysema",5
+"Atelectasis, Effusion, Pneumothorax, Pleural_Thickening",5
+"Effusion, Infiltration, Emphysema, Pleural_Thickening",5
+"Effusion, Infiltration, Pneumothorax, Consolidation",5
+"Infiltration, Mass, Fibrosis",5
+"Atelectasis, Nodule, Pneumonia",5
+"Cardiomegaly, Effusion, Infiltration, Pleural_Thickening",5
+"Pneumonia, Fibrosis",5
+"Effusion, Nodule, Emphysema",5
+"Atelectasis, Effusion, Nodule, Pleural_Thickening",5
+"Effusion, Infiltration, Pneumonia, Consolidation",5
+"Atelectasis, Infiltration, Mass, Pneumothorax",5
+"Pneumonia, Pneumothorax",5
+"Effusion, Infiltration, Consolidation, Edema",5
+"Atelectasis, Effusion, Infiltration, Pneumothorax, Consolidation",5
+"Atelectasis, Effusion, Infiltration, Mass, Consolidation",5
+"Effusion, Hernia",5
+"Cardiomegaly, Effusion, Pneumothorax, Emphysema",5
+"Pneumonia, Emphysema",5
+"Atelectasis, Pneumothorax, Hernia",5
+"Mass, Emphysema, Pleural_Thickening",5
+"Infiltration, Consolidation, Emphysema",5
+"Atelectasis, Infiltration, Pneumonia, Consolidation",4
+"Atelectasis, Infiltration, Pneumonia, Consolidation, Edema",4
+"Mass, Pneumonia, Edema",4
+"Atelectasis, Infiltration, Nodule, Pleural_Thickening",4
+"Cardiomegaly, Effusion, Infiltration, Pneumothorax",4
+"Atelectasis, Infiltration, Pneumothorax, Emphysema, Pleural_Thickening",4
+"Atelectasis, Effusion, Consolidation, Fibrosis",4
+"Atelectasis, Mass, Pneumothorax, Emphysema",4
+"Atelectasis, Cardiomegaly, Infiltration, Consolidation",4
+"Atelectasis, Effusion, Hernia",4
+"Atelectasis, Effusion, Mass, Pneumothorax",4
+"Atelectasis, Cardiomegaly, Effusion, Pleural_Thickening",4
+"Cardiomegaly, Infiltration, Pneumothorax",4
+"Mass, Consolidation, Emphysema",4
+"Atelectasis, Infiltration, Nodule, Consolidation",4
+"Atelectasis, Emphysema, Pleural_Thickening",4
+"Atelectasis, Cardiomegaly, Effusion, Nodule",4
+"Cardiomegaly, Infiltration, Nodule, Edema",4
+"Atelectasis, Effusion, Emphysema, Pleural_Thickening",4
+"Mass, Consolidation, Fibrosis, Pleural_Thickening",4
+"Infiltration, Pneumonia, Pleural_Thickening",4
+"Atelectasis, Effusion, Infiltration, Consolidation, Edema",4
+"Infiltration, Pneumonia, Pneumothorax, Edema",4
+"Atelectasis, Effusion, Infiltration, Mass, Consolidation, Emphysema",4
+"Effusion, Pneumonia, Pneumothorax",4
+"Effusion, Infiltration, Mass, Edema",4
+"Atelectasis, Effusion, Infiltration, Mass, Pleural_Thickening",4
+"Atelectasis, Infiltration, Nodule, Pneumothorax, Emphysema",4
+"Effusion, Mass, Nodule, Consolidation, Pleural_Thickening",4
+"Effusion, Infiltration, Mass, Consolidation, Edema",4
+"Infiltration, Nodule, Pneumothorax, Emphysema",4
+"Effusion, Infiltration, Nodule, Pneumothorax, Pleural_Thickening",4
+"Pneumothorax, Emphysema, Fibrosis",4
+"Effusion, Mass, Consolidation, Edema",4
+"Atelectasis, Infiltration, Consolidation, Emphysema",4
+"Effusion, Mass, Pneumothorax, Consolidation",4
+"Effusion, Infiltration, Pneumonia, Pleural_Thickening",4
+"Atelectasis, Cardiomegaly, Effusion, Mass",4
+"Atelectasis, Effusion, Infiltration, Nodule, Pneumothorax",4
+"Infiltration, Pneumonia, Edema, Emphysema",4
+"Cardiomegaly, Effusion, Infiltration, Mass",4
+"Atelectasis, Cardiomegaly, Effusion, Edema",3
+"Atelectasis, Infiltration, Pneumothorax, Consolidation",3
+"Atelectasis, Infiltration, Mass, Pneumothorax, Emphysema",3
+"Atelectasis, Cardiomegaly, Pleural_Thickening",3
+"Cardiomegaly, Effusion, Infiltration, Fibrosis",3
+"Cardiomegaly, Effusion, Mass, Emphysema",3
+"Atelectasis, Effusion, Infiltration, Consolidation, Emphysema",3
+"Effusion, Nodule, Pneumothorax, Consolidation, Emphysema",3
+"Nodule, Pneumonia, Edema",3
+"Atelectasis, Mass, Fibrosis",3
+"Mass, Fibrosis, Pleural_Thickening",3
+"Atelectasis, Nodule, Edema",3
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass",3
+"Atelectasis, Effusion, Infiltration, Fibrosis",3
+"Atelectasis, Infiltration, Mass, Consolidation, Pleural_Thickening",3
+"Atelectasis, Cardiomegaly, Effusion, Nodule, Pleural_Thickening",3
+"Cardiomegaly, Effusion, Mass, Nodule, Consolidation",3
+"Infiltration, Pneumothorax, Fibrosis, Pleural_Thickening",3
+"Atelectasis, Effusion, Mass, Emphysema, Pleural_Thickening",3
+"Effusion, Nodule, Pneumothorax, Pleural_Thickening",3
+"Effusion, Nodule, Fibrosis, Pleural_Thickening",3
+"Atelectasis, Effusion, Pneumonia, Pneumothorax",3
+"Atelectasis, Effusion, Infiltration, Pneumonia, Edema",3
+"Atelectasis, Cardiomegaly, Edema",3
+"Cardiomegaly, Effusion, Consolidation, Edema",3
+"Atelectasis, Effusion, Infiltration, Pneumothorax, Pleural_Thickening",3
+"Cardiomegaly, Effusion, Infiltration, Pneumonia, Edema",3
+"Nodule, Emphysema, Pleural_Thickening",3
+"Effusion, Pneumothorax, Emphysema, Pleural_Thickening",3
+"Infiltration, Mass, Nodule, Fibrosis",3
+"Infiltration, Nodule, Consolidation, Fibrosis",3
+"Atelectasis, Effusion, Pneumonia, Consolidation",3
+"Atelectasis, Consolidation, Fibrosis",3
+"Cardiomegaly, Effusion, Mass, Nodule",3
+"Effusion, Mass, Pneumonia",3
+"Effusion, Infiltration, Pneumothorax, Pleural_Thickening",3
+"Cardiomegaly, Consolidation, Edema",3
+"Atelectasis, Cardiomegaly, Effusion, Mass, Consolidation",3
+"Infiltration, Mass, Fibrosis, Pleural_Thickening",3
+"Atelectasis, Infiltration, Mass, Edema",3
+"Effusion, Mass, Nodule, Edema",3
+"Cardiomegaly, Mass, Edema",3
+"Atelectasis, Mass, Nodule, Pleural_Thickening",3
+"Cardiomegaly, Infiltration, Pneumonia, Edema",3
+"Atelectasis, Nodule, Consolidation, Pleural_Thickening",3
+"Atelectasis, Cardiomegaly, Pneumonia",3
+"Cardiomegaly, Pneumonia, Consolidation",3
+"Infiltration, Pneumonia, Consolidation, Edema",3
+"Atelectasis, Infiltration, Nodule, Edema",3
+"Effusion, Infiltration, Nodule, Pneumonia",3
+"Infiltration, Mass, Pneumothorax, Consolidation",3
+"Cardiomegaly, Mass, Pleural_Thickening",3
+"Consolidation, Emphysema, Pleural_Thickening",3
+"Cardiomegaly, Effusion, Pneumothorax",3
+"Effusion, Mass, Consolidation, Pleural_Thickening",3
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Consolidation, Pleural_Thickening",2
+"Mass, Consolidation, Fibrosis",2
+"Atelectasis, Effusion, Nodule, Edema",2
+"Cardiomegaly, Consolidation, Pleural_Thickening",2
+"Infiltration, Mass, Pneumothorax, Pleural_Thickening",2
+"Effusion, Edema, Emphysema",2
+"Infiltration, Nodule, Consolidation, Pleural_Thickening",2
+"Cardiomegaly, Effusion, Mass, Pleural_Thickening",2
+"Effusion, Infiltration, Nodule, Fibrosis",2
+"Mass, Nodule, Fibrosis, Pleural_Thickening",2
+"Effusion, Mass, Pneumothorax, Emphysema",2
+"Atelectasis, Cardiomegaly, Effusion, Pneumothorax",2
+"Effusion, Infiltration, Hernia",2
+"Consolidation, Hernia",2
+"Cardiomegaly, Effusion, Mass, Nodule, Edema",2
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Pneumothorax",2
+"Effusion, Infiltration, Pneumonia, Pneumothorax",2
+"Atelectasis, Infiltration, Pneumonia, Pleural_Thickening",2
+"Atelectasis, Nodule, Emphysema",2
+"Cardiomegaly, Effusion, Mass, Consolidation",2
+"Atelectasis, Mass, Pneumothorax, Pleural_Thickening",2
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Pneumothorax, Pleural_Thickening",2
+"Atelectasis, Effusion, Infiltration, Nodule, Pleural_Thickening",2
+"Atelectasis, Pneumonia, Emphysema",2
+"Atelectasis, Effusion, Fibrosis, Pleural_Thickening",2
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Consolidation, Edema",2
+"Effusion, Mass, Pneumonia, Consolidation",2
+"Atelectasis, Cardiomegaly, Effusion, Consolidation, Edema, Pleural_Thickening",2
+"Infiltration, Pneumothorax, Consolidation, Emphysema",2
+"Pneumonia, Pneumothorax, Emphysema",2
+"Atelectasis, Effusion, Infiltration, Mass, Fibrosis",2
+"Atelectasis, Infiltration, Pneumonia, Emphysema",2
+"Atelectasis, Pneumothorax, Fibrosis",2
+"Effusion, Pneumothorax, Edema",2
+"Infiltration, Mass, Consolidation, Edema",2
+"Infiltration, Pneumonia, Consolidation, Pleural_Thickening",2
+"Cardiomegaly, Effusion, Nodule, Fibrosis",2
+"Infiltration, Mass, Pneumothorax, Consolidation, Pleural_Thickening",2
+"Effusion, Infiltration, Mass, Pneumonia, Pleural_Thickening",2
+"Mass, Pneumothorax, Fibrosis",2
+"Atelectasis, Infiltration, Mass, Nodule, Consolidation",2
+"Atelectasis, Nodule, Emphysema, Pleural_Thickening",2
+"Effusion, Infiltration, Pneumonia, Edema, Pleural_Thickening",2
+"Pleural_Thickening, Hernia",2
+"Atelectasis, Pneumothorax, Emphysema, Pleural_Thickening",2
+"Atelectasis, Pneumonia, Consolidation, Edema",2
+"Atelectasis, Effusion, Pneumonia, Pneumothorax, Edema",2
+"Cardiomegaly, Effusion, Infiltration, Fibrosis, Pleural_Thickening",2
+"Atelectasis, Effusion, Infiltration, Nodule, Consolidation",2
+"Atelectasis, Mass, Nodule, Consolidation",2
+"Atelectasis, Infiltration, Emphysema, Pleural_Thickening",2
+"Infiltration, Pneumothorax, Consolidation, Pleural_Thickening",2
+"Cardiomegaly, Pneumothorax, Emphysema",2
+"Effusion, Nodule, Pneumothorax, Emphysema",2
+"Cardiomegaly, Hernia",2
+"Cardiomegaly, Infiltration, Pneumonia",2
+"Cardiomegaly, Effusion, Hernia",2
+"Fibrosis, Hernia",2
+"Atelectasis, Nodule, Consolidation, Fibrosis",2
+"Edema, Fibrosis",2
+"Effusion, Nodule, Pneumonia, Edema",2
+"Effusion, Pneumonia, Fibrosis",2
+"Cardiomegaly, Effusion, Pneumothorax, Fibrosis, Pleural_Thickening",2
+"Effusion, Infiltration, Mass, Pneumonia",2
+"Infiltration, Edema, Pleural_Thickening",2
+"Pneumonia, Edema, Pleural_Thickening",2
+"Atelectasis, Nodule, Hernia",2
+"Atelectasis, Effusion, Infiltration, Mass, Edema",2
+"Cardiomegaly, Effusion, Infiltration, Pneumothorax, Emphysema",2
+"Atelectasis, Cardiomegaly, Effusion, Pneumonia",2
+"Cardiomegaly, Effusion, Mass, Pneumothorax",2
+"Cardiomegaly, Effusion, Nodule, Pleural_Thickening",2
+"Effusion, Infiltration, Pneumothorax, Emphysema, Pleural_Thickening",2
+"Pneumothorax, Hernia",2
+"Pneumothorax, Edema, Emphysema",2
+"Cardiomegaly, Infiltration, Mass",2
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Pleural_Thickening",2
+"Atelectasis, Effusion, Infiltration, Pneumothorax, Emphysema",2
+"Atelectasis, Effusion, Mass, Nodule, Consolidation, Pleural_Thickening",2
+"Cardiomegaly, Nodule, Fibrosis",2
+"Nodule, Pneumothorax, Fibrosis",2
+"Pneumothorax, Consolidation, Fibrosis",2
+"Infiltration, Mass, Nodule, Pneumothorax, Pleural_Thickening",2
+"Infiltration, Mass, Hernia",2
+"Atelectasis, Infiltration, Hernia",2
+"Effusion, Infiltration, Mass, Edema, Fibrosis",2
+"Cardiomegaly, Infiltration, Mass, Nodule",2
+"Cardiomegaly, Effusion, Infiltration, Nodule, Edema",2
+"Infiltration, Nodule, Consolidation, Edema",2
+"Cardiomegaly, Effusion, Mass, Fibrosis",2
+"Atelectasis, Effusion, Mass, Consolidation, Emphysema",2
+"Atelectasis, Infiltration, Mass, Emphysema",2
+"Atelectasis, Effusion, Mass, Emphysema",2
+"Atelectasis, Infiltration, Mass, Pneumonia, Consolidation",2
+"Atelectasis, Mass, Pneumonia",2
+"Atelectasis, Nodule, Pneumothorax, Emphysema",2
+"Atelectasis, Mass, Pneumothorax, Consolidation",2
+"Atelectasis, Infiltration, Edema, Pleural_Thickening",2
+"Atelectasis, Infiltration, Mass, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Effusion, Mass, Pneumothorax, Emphysema, Fibrosis",1
+"Atelectasis, Effusion, Mass, Nodule, Pneumothorax, Consolidation",1
+"Atelectasis, Cardiomegaly, Effusion, Mass, Consolidation, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Mass, Pleural_Thickening",1
+"Effusion, Mass, Nodule, Emphysema",1
+"Atelectasis, Infiltration, Nodule, Consolidation, Pleural_Thickening",1
+"Infiltration, Mass, Consolidation, Fibrosis, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Mass, Pneumothorax, Consolidation",1
+"Atelectasis, Cardiomegaly, Mass, Pneumothorax, Fibrosis",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Nodule, Consolidation, Edema",1
+"Atelectasis, Mass, Nodule, Consolidation, Pleural_Thickening",1
+"Effusion, Mass, Pneumothorax, Edema",1
+"Effusion, Pneumothorax, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Mass, Nodule",1
+"Infiltration, Nodule, Pneumothorax, Consolidation, Emphysema, Pleural_Thickening",1
+"Atelectasis, Mass, Nodule, Pneumothorax",1
+"Effusion, Nodule, Fibrosis",1
+"Atelectasis, Pneumothorax, Edema, Emphysema",1
+"Infiltration, Pneumothorax, Hernia",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Nodule, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Nodule, Consolidation",1
+"Atelectasis, Mass, Nodule, Pneumothorax, Consolidation, Emphysema, Pleural_Thickening",1
+"Mass, Emphysema, Fibrosis, Hernia",1
+"Atelectasis, Edema, Emphysema",1
+"Cardiomegaly, Effusion, Consolidation, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Consolidation, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Mass, Nodule, Consolidation, Edema, Pleural_Thickening",1
+"Nodule, Consolidation, Edema",1
+"Atelectasis, Cardiomegaly, Effusion, Mass, Consolidation, Edema",1
+"Cardiomegaly, Effusion, Mass, Nodule, Consolidation, Pleural_Thickening",1
+"Cardiomegaly, Infiltration, Nodule, Pneumothorax",1
+"Pneumonia, Pneumothorax, Edema",1
+"Atelectasis, Effusion, Infiltration, Mass, Consolidation, Fibrosis",1
+"Atelectasis, Cardiomegaly, Effusion, Mass, Nodule, Consolidation",1
+"Cardiomegaly, Infiltration, Hernia",1
+"Atelectasis, Effusion, Infiltration, Mass, Consolidation, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Fibrosis, Pleural_Thickening",1
+"Cardiomegaly, Nodule, Edema",1
+"Atelectasis, Mass, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Infiltration, Pneumothorax, Emphysema, Fibrosis",1
+"Atelectasis, Nodule, Emphysema, Fibrosis",1
+"Effusion, Infiltration, Pneumonia, Emphysema",1
+"Atelectasis, Pneumonia, Edema",1
+"Effusion, Mass, Nodule, Consolidation, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Mass, Pneumothorax, Consolidation, Emphysema",1
+"Atelectasis, Infiltration, Pneumonia, Pneumothorax, Emphysema",1
+"Cardiomegaly, Effusion, Infiltration, Emphysema",1
+"Effusion, Mass, Emphysema, Pleural_Thickening",1
+"Mass, Nodule, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Effusion, Pneumonia, Pneumothorax, Edema, Pleural_Thickening",1
+"Atelectasis, Mass, Consolidation, Edema, Pleural_Thickening",1
+"Pneumothorax, Consolidation, Pleural_Thickening",1
+"Effusion, Infiltration, Mass, Consolidation, Pleural_Thickening",1
+"Infiltration, Pneumothorax, Edema, Emphysema",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Consolidation",1
+"Atelectasis, Effusion, Infiltration, Mass, Edema, Emphysema",1
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Pneumonia, Consolidation, Edema, Pleural_Thickening",1
+"Infiltration, Pneumonia, Pneumothorax, Edema, Pleural_Thickening",1
+"Atelectasis, Infiltration, Fibrosis, Pleural_Thickening",1
+"Nodule, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Pneumonia, Edema, Pleural_Thickening",1
+"Infiltration, Mass, Pneumonia, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Edema, Pleural_Thickening",1
+"Infiltration, Mass, Emphysema, Pleural_Thickening",1
+"Effusion, Nodule, Emphysema, Pleural_Thickening",1
+"Infiltration, Nodule, Hernia",1
+"Atelectasis, Infiltration, Mass, Nodule, Pneumothorax, Hernia",1
+"Effusion, Consolidation, Emphysema",1
+"Mass, Pneumonia, Consolidation",1
+"Atelectasis, Effusion, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Nodule, Pneumonia, Consolidation",1
+"Atelectasis, Nodule, Pneumothorax, Pleural_Thickening",1
+"Infiltration, Nodule, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Pneumonia, Consolidation",1
+"Infiltration, Nodule, Consolidation, Emphysema",1
+"Cardiomegaly, Mass, Hernia",1
+"Atelectasis, Effusion, Infiltration, Emphysema, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Pneumonia, Pneumothorax",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Consolidation",1
+"Mass, Nodule, Emphysema, Pleural_Thickening",1
+"Atelectasis, Infiltration, Nodule, Pneumothorax, Emphysema, Fibrosis",1
+"Atelectasis, Emphysema, Fibrosis",1
+"Atelectasis, Cardiomegaly, Effusion, Pneumothorax, Consolidation",1
+"Infiltration, Mass, Nodule, Emphysema, Pleural_Thickening",1
+"Mass, Nodule, Pneumonia, Pneumothorax",1
+"Atelectasis, Effusion, Infiltration, Pneumothorax, Emphysema, Pleural_Thickening",1
+"Infiltration, Nodule, Pneumothorax, Pleural_Thickening",1
+"Atelectasis, Effusion, Mass, Pneumothorax, Edema",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Nodule, Pneumonia, Edema",1
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Pneumothorax, Consolidation, Fibrosis, Pleural_Thickening",1
+"Infiltration, Nodule, Edema, Pleural_Thickening",1
+"Infiltration, Nodule, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Emphysema, Fibrosis, Pleural_Thickening",1
+"Effusion, Infiltration, Mass, Nodule, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Atelectasis, Mass, Nodule, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Atelectasis, Nodule, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Consolidation, Pleural_Thickening",1
+"Mass, Edema, Pleural_Thickening",1
+"Infiltration, Mass, Nodule, Consolidation, Pleural_Thickening",1
+"Mass, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Consolidation, Edema, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Edema",1
+"Infiltration, Mass, Edema, Fibrosis",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Nodule, Consolidation",1
+"Infiltration, Mass, Nodule, Pneumonia",1
+"Atelectasis, Infiltration, Nodule, Edema, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Pneumothorax",1
+"Atelectasis, Cardiomegaly, Pneumothorax",1
+"Effusion, Infiltration, Nodule, Pneumothorax, Fibrosis, Pleural_Thickening",1
+"Effusion, Infiltration, Mass, Pneumothorax, Pleural_Thickening",1
+"Atelectasis, Nodule, Pneumothorax, Emphysema, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Pleural_Thickening",1
+"Atelectasis, Effusion, Pneumonia, Edema",1
+"Cardiomegaly, Effusion, Nodule, Edema",1
+"Infiltration, Nodule, Pneumonia, Consolidation",1
+"Atelectasis, Pleural_Thickening, Hernia",1
+"Atelectasis, Mass, Edema, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Pneumonia",1
+"Atelectasis, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Infiltration, Fibrosis, Hernia",1
+"Infiltration, Edema, Fibrosis",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Edema, Pleural_Thickening",1
+"Consolidation, Edema, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Nodule, Consolidation, Emphysema",1
+"Atelectasis, Effusion, Nodule, Pneumothorax, Consolidation, Emphysema",1
+"Effusion, Infiltration, Nodule, Emphysema, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Edema, Hernia",1
+"Infiltration, Pleural_Thickening, Hernia",1
+"Cardiomegaly, Nodule, Pneumonia",1
+"Infiltration, Mass, Pneumothorax, Edema",1
+"Effusion, Infiltration, Nodule, Emphysema",1
+"Mass, Nodule, Pneumonia, Consolidation",1
+"Effusion, Mass, Nodule, Pneumothorax, Consolidation",1
+"Cardiomegaly, Effusion, Emphysema, Fibrosis",1
+"Atelectasis, Edema, Pleural_Thickening",1
+"Mass, Pneumothorax, Emphysema, Fibrosis, Pleural_Thickening",1
+"Infiltration, Emphysema, Fibrosis",1
+"Mass, Fibrosis, Hernia",1
+"Atelectasis, Mass, Pneumothorax, Emphysema, Fibrosis",1
+"Effusion, Infiltration, Mass, Fibrosis",1
+"Atelectasis, Effusion, Infiltration, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Effusion, Infiltration, Pneumonia, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Effusion, Nodule, Consolidation, Fibrosis",1
+"Atelectasis, Mass, Hernia",1
+"Cardiomegaly, Mass, Nodule",1
+"Emphysema, Pleural_Thickening, Hernia",1
+"Atelectasis, Infiltration, Pneumothorax, Consolidation, Emphysema",1
+"Cardiomegaly, Infiltration, Consolidation, Edema",1
+"Atelectasis, Nodule, Edema, Emphysema",1
+"Atelectasis, Cardiomegaly, Effusion, Nodule, Fibrosis",1
+"Cardiomegaly, Pneumothorax, Consolidation, Emphysema",1
+"Infiltration, Nodule, Pneumothorax, Consolidation",1
+"Effusion, Pneumothorax, Consolidation, Emphysema",1
+"Atelectasis, Mass, Pneumonia, Consolidation",1
+"Emphysema, Hernia",1
+"Effusion, Infiltration, Mass, Nodule, Pneumonia, Pleural_Thickening",1
+"Infiltration, Pneumonia, Hernia",1
+"Atelectasis, Pneumonia, Pneumothorax, Emphysema",1
+"Effusion, Mass, Nodule, Consolidation, Edema",1
+"Infiltration, Mass, Pneumonia, Pneumothorax, Edema",1
+"Effusion, Infiltration, Mass, Nodule, Pneumonia, Consolidation, Pleural_Thickening",1
+"Mass, Emphysema, Fibrosis",1
+"Atelectasis, Infiltration, Nodule, Fibrosis",1
+"Effusion, Infiltration, Edema, Hernia",1
+"Effusion, Pneumonia, Hernia",1
+"Atelectasis, Pneumonia, Pneumothorax, Consolidation, Edema",1
+"Infiltration, Pneumonia, Consolidation, Hernia",1
+"Atelectasis, Infiltration, Mass, Nodule, Fibrosis",1
+"Mass, Consolidation, Hernia",1
+"Effusion, Infiltration, Mass, Edema, Emphysema",1
+"Cardiomegaly, Nodule, Consolidation",1
+"Effusion, Infiltration, Edema, Emphysema",1
+"Atelectasis, Fibrosis, Hernia",1
+"Atelectasis, Cardiomegaly, Mass, Pneumothorax, Emphysema",1
+"Infiltration, Mass, Nodule, Edema, Pleural_Thickening",1
+"Pneumothorax, Consolidation, Edema",1
+"Mass, Pneumothorax, Edema, Emphysema",1
+"Atelectasis, Cardiomegaly, Infiltration, Pneumothorax",1
+"Nodule, Pneumonia, Pleural_Thickening",1
+"Effusion, Mass, Pleural_Thickening, Hernia",1
+"Atelectasis, Mass, Edema",1
+"Nodule, Pneumonia, Consolidation, Fibrosis",1
+"Infiltration, Nodule, Pneumonia, Fibrosis",1
+"Nodule, Pneumothorax, Edema",1
+"Cardiomegaly, Infiltration, Nodule, Pneumonia",1
+"Pneumonia, Pneumothorax, Consolidation",1
+"Effusion, Pneumothorax, Consolidation, Edema",1
+"Effusion, Mass, Consolidation, Fibrosis",1
+"Infiltration, Pneumonia, Fibrosis",1
+"Mass, Nodule, Pneumothorax, Consolidation",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Pneumothorax, Edema",1
+"Mass, Nodule, Pneumothorax, Emphysema",1
+"Effusion, Mass, Nodule, Emphysema, Fibrosis",1
+"Infiltration, Pneumonia, Emphysema",1
+"Infiltration, Pneumonia, Emphysema, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Edema, Fibrosis",1
+"Effusion, Mass, Nodule, Fibrosis, Pleural_Thickening",1
+"Effusion, Infiltration, Fibrosis, Pleural_Thickening",1
+"Infiltration, Emphysema, Fibrosis, Pleural_Thickening, Hernia",1
+"Effusion, Pneumonia, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Fibrosis",1
+"Atelectasis, Cardiomegaly, Infiltration, Edema",1
+"Cardiomegaly, Effusion, Pneumonia, Edema",1
+"Atelectasis, Cardiomegaly, Effusion, Fibrosis",1
+"Cardiomegaly, Edema, Pleural_Thickening",1
+"Atelectasis, Infiltration, Consolidation, Fibrosis",1
+"Atelectasis, Effusion, Mass, Consolidation, Fibrosis",1
+"Effusion, Infiltration, Nodule, Pneumothorax, Emphysema",1
+"Effusion, Nodule, Pneumothorax, Emphysema, Fibrosis",1
+"Effusion, Pleural_Thickening, Hernia",1
+"Infiltration, Pneumothorax, Edema",1
+"Atelectasis, Effusion, Consolidation, Edema, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Fibrosis, Pleural_Thickening",1
+"Effusion, Infiltration, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Effusion, Infiltration, Pneumothorax, Edema",1
+"Atelectasis, Effusion, Infiltration, Pneumonia, Consolidation, Edema",1
+"Atelectasis, Cardiomegaly, Effusion, Consolidation, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Nodule, Consolidation, Pleural_Thickening",1
+"Atelectasis, Effusion, Pneumonia, Consolidation, Edema",1
+"Cardiomegaly, Effusion, Edema, Fibrosis, Hernia",1
+"Effusion, Infiltration, Consolidation, Emphysema",1
+"Atelectasis, Effusion, Infiltration, Nodule, Consolidation, Pleural_Thickening",1
+"Effusion, Mass, Pneumonia, Pneumothorax",1
+"Atelectasis, Effusion, Mass, Pneumothorax, Consolidation, Emphysema",1
+"Effusion, Nodule, Pneumonia",1
+"Cardiomegaly, Effusion, Pneumothorax, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Nodule, Fibrosis",1
+"Effusion, Mass, Fibrosis, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Consolidation, Pleural_Thickening",1
+"Atelectasis, Mass, Nodule, Pneumonia",1
+"Atelectasis, Infiltration, Emphysema, Fibrosis",1
+"Effusion, Infiltration, Mass, Emphysema",1
+"Atelectasis, Effusion, Mass, Nodule, Consolidation, Emphysema, Fibrosis",1
+"Pneumonia, Consolidation, Emphysema",1
+"Atelectasis, Infiltration, Mass, Pneumonia",1
+"Atelectasis, Infiltration, Consolidation, Edema",1
+"Atelectasis, Mass, Consolidation, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Mass, Consolidation, Edema",1
+"Effusion, Infiltration, Mass, Nodule, Emphysema",1
+"Infiltration, Nodule, Pneumonia, Edema",1
+"Atelectasis, Mass, Consolidation, Emphysema, Pleural_Thickening",1
+"Effusion, Infiltration, Mass, Pneumonia, Edema",1
+"Effusion, Mass, Nodule, Fibrosis",1
+"Cardiomegaly, Effusion, Infiltration, Mass, Pneumonia",1
+"Atelectasis, Mass, Nodule, Pneumothorax, Consolidation",1
+"Infiltration, Mass, Nodule, Consolidation, Emphysema",1
+"Atelectasis, Mass, Emphysema, Fibrosis",1
+"Atelectasis, Effusion, Infiltration, Hernia",1
+"Cardiomegaly, Effusion, Edema, Pleural_Thickening",1
+"Infiltration, Mass, Nodule, Edema, Fibrosis",1
+"Effusion, Mass, Nodule, Pneumothorax, Pleural_Thickening",1
+"Effusion, Mass, Nodule, Pneumonia",1
+"Infiltration, Mass, Nodule, Edema",1
+"Atelectasis, Effusion, Infiltration, Mass, Nodule, Pneumothorax, Consolidation",1
+"Mass, Pneumonia, Pneumothorax, Emphysema",1
+"Atelectasis, Effusion, Pneumothorax, Consolidation, Emphysema",1
+"Atelectasis, Effusion, Consolidation, Fibrosis, Pleural_Thickening",1
+"Effusion, Infiltration, Mass, Nodule, Pneumothorax",1
+"Effusion, Mass, Consolidation, Emphysema",1
+"Atelectasis, Cardiomegaly, Consolidation, Edema",1
+"Effusion, Pneumonia, Edema, Pleural_Thickening",1
+"Effusion, Mass, Hernia",1
+"Infiltration, Mass, Pneumonia, Edema, Emphysema",1
+"Infiltration, Nodule, Consolidation, Emphysema, Pleural_Thickening",1
+"Cardiomegaly, Effusion, Infiltration, Pneumonia",1
+"Effusion, Infiltration, Mass, Nodule, Pneumonia",1
+"Atelectasis, Cardiomegaly, Effusion, Infiltration, Pneumonia, Consolidation",1
+"Cardiomegaly, Mass, Consolidation",1
+"Effusion, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Atelectasis, Cardiomegaly, Infiltration, Mass",1
+"Cardiomegaly, Effusion, Infiltration, Consolidation, Edema",1
+"Atelectasis, Effusion, Mass, Nodule, Edema",1
+"Atelectasis, Effusion, Infiltration, Consolidation, Fibrosis, Pleural_Thickening",1
+"Atelectasis, Effusion, Infiltration, Nodule, Edema, Pleural_Thickening",1
+"Effusion, Pneumonia, Consolidation, Edema",1
+"Infiltration, Pneumonia, Consolidation, Edema, Pleural_Thickening",1
+"Atelectasis, Infiltration, Consolidation, Pleural_Thickening",1
+"Cardiomegaly, Pneumothorax, Fibrosis",1
+"Atelectasis, Effusion, Infiltration, Pneumonia, Consolidation",1
+"Atelectasis, Effusion, Nodule, Pneumothorax, Consolidation",1
+"Effusion, Infiltration, Mass, Pneumothorax, Consolidation",1
+"Atelectasis, Effusion, Mass, Pneumothorax, Emphysema",1
+"Infiltration, Mass, Nodule, Pneumonia, Edema",1
+"Mass, Pneumothorax, Consolidation, Emphysema",1
+"Mass, Pneumonia, Pneumothorax, Consolidation",1
+"Atelectasis, Effusion, Pneumothorax, Fibrosis",1
+"Atelectasis, Infiltration, Nodule, Pneumothorax, Fibrosis",1
+"Atelectasis, Effusion, Infiltration, Mass, Pneumothorax, Consolidation",1
+"Atelectasis, Infiltration, Pneumothorax, Consolidation, Pleural_Thickening",1
+"Atelectasis, Nodule, Pneumonia, Consolidation",1
+"Effusion, Edema, Pleural_Thickening",1
+"Atelectasis, Mass, Pneumothorax, Consolidation, Pleural_Thickening",1
