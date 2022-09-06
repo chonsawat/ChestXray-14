@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.utils import *
 
 # Weight & Bias
 import wandb
@@ -55,7 +55,6 @@ def get_densenet121_model():
         ),
         tf.keras.layers.Dense(15, activation='sigmoid')  # 15 Output for new datasets
     ])
-    model.layers[0].trainable = False
     return model
 
 
@@ -72,44 +71,27 @@ if tf.test.gpu_device_name():
     """
     Check if a GPU is none it's will terminate programs.
     """
-    
-    # =========== Weight & Bias ==============
-    run = wandb.init(project="ChestXray",
-                    config = {
-                      "epochs": 20,
-                      "batch_size": BATCH_SIZE,
-                      "loss_function": "binary_crossentropy"
-                    })
-    config = wandb.config
 
-    
-    train_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/train/*.tfrec')
-    val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
-
-
-    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
-    val_dataset = get_dataset(val_filenames, cached=True, color=True)
 
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
         model = get_densenet121_model()
-        
+
         model.compile(
             optimizer='adam',
-            loss=config.loss_function,
+            loss='binary_crossentropy',
             metrics=tf.keras.metrics.AUC(multi_label=True))
+        
+        # TODO: Restore model
+        best_model = wandb.restore('model-best.h5', run_path='chestxray/ChestXray/3mh42m31')
+        model.load_weights(best_model.name)
+        os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 
-    history = model.fit(
-        train_dataset,
-        epochs=config.epochs,
-        validation_data=val_dataset,
-        verbose=1,
-        # batch_size=BATCH_SIZE,
-        callbacks=[WandbCallback()])
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_Pretrained_epochs_{config.epochs}.h5")
-    print("Save Model")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_epochs-20.h5")
+    print("Saved")
+    os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================

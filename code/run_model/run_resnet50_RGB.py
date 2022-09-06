@@ -1,6 +1,6 @@
 """ Documations
 Path:
-    Elab Dataset Path: 
+    Elab Path: 
         input_path = "~/ChestXray-14/dataset/ChestXray NIH"
 """
 # Modules
@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.utils import *
 
 # Weight & Bias
 import wandb
@@ -50,8 +50,8 @@ def get_resnet50_model():
         tf.keras.applications.resnet50.ResNet50(
             include_top=False, 
             input_shape=(None, None, 3),  # new dataset is grey-scale image
-            weights='imagenet',
-            pooling='avg',
+            weights=None,
+            pooling='avg'
         ),
         tf.keras.layers.Dense(15, activation='sigmoid')  # 15 Output for new datasets
     ])
@@ -71,26 +71,41 @@ if tf.test.gpu_device_name():
     """
     Check if a GPU is none it's will terminate programs.
     """
-
+    train_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/train/*.tfrec')
+    val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
 
+    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
+    val_dataset = get_dataset(val_filenames, cached=True, color=True)
+
+    # =========== Weight & Bias ==============
+    run = wandb.init(project="ChestXray",
+                    config = {
+                      "epochs": 20,
+                      "batch_size": BATCH_SIZE,
+                      "loss_function": "binary_crossentropy"
+                    })
+    config = wandb.config
+    # ========================================
+    
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
         model = get_resnet50_model()
-
-        model.compile(
-            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
-            loss='binary_crossentropy',
-            metrics=tf.keras.metrics.AUC(multi_label=True))
         
-        # TODO: Restore model
-        best_model = wandb.restore('model-best.h5', run_path='chestxray/ChestXray/111v32no')
-        model.load_weights(best_model.name)
+        model.compile(
+            optimizer='adam',
+            loss=config.loss_function,
+            metrics=tf.keras.metrics.AUC(multi_label=True))
 
+    history = model.fit(
+        train_dataset,
+        epochs=config.epochs,
+        validation_data=val_dataset,
+        verbose=1,
+        callbacks=[WandbCallback()]) # Callback API to Weight & Bias
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/Resnet50_Transfer_epochs-20.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/Resnet50_RGB_epochs-{config.epochs}.h5")
     print("Saved")
-    os.system("rm /home/jovyan/ChestXray-14/model-best.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================

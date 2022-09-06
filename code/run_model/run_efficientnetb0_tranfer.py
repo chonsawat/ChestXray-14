@@ -7,7 +7,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.utils import *
 
 # Weight & Bias
 import wandb
@@ -32,7 +32,7 @@ def get_model():
         tf.keras.applications.EfficientNetB0(
             include_top=False,
             input_shape=(None, None, 3),
-            weights=None,
+            weights='imagenet',
             pooling='avg'),
         tf.keras.layers.Dense(15, activation='sigmoid')
     ])
@@ -65,9 +65,6 @@ if tf.test.gpu_device_name():
     val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
 
-    # steps_per_epoch = count_data_items(train_filenames) // BATCH_SIZE
-    # validation_steps = count_data_items(val_filenames) // BATCH_SIZE
-
     train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
     val_dataset = get_dataset(val_filenames, cached=True, color=True)
 
@@ -89,7 +86,7 @@ if tf.test.gpu_device_name():
         verbose=1,
         callbacks=[WandbCallback()])
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/EfficientNetB0_RGB_epochs-{config.epochs}.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/EfficientNetB0_tranfer_epochs-{config.epochs}.h5")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================

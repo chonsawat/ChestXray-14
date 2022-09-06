@@ -1,6 +1,6 @@
 """ Documations
 Path:
-    Elab Path: 
+    Elab Dataset Path: 
         input_path = "~/ChestXray-14/dataset/ChestXray NIH"
 """
 # Modules
@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.utils import *
 
 # Weight & Bias
 import wandb
@@ -32,9 +32,9 @@ else:
 print("\n")
 
 # ============ Function =============
-def get_resnet50_model():
+def get_densenet121_model():
     """
-    get_resnet50_model():
+    get_densenet121_model():
         create the tensorflow model
         ===========================
         return:
@@ -43,14 +43,14 @@ def get_resnet50_model():
             
         Example use
         ===========
-        >>> model = get_resnet50_model()
+        >>> model = get_densenet121_model()
         
     """
     model = tf.keras.models.Sequential([
-        tf.keras.applications.resnet50.ResNet50(
+        tf.keras.applications.densenet.DenseNet121(
             include_top=False, 
             input_shape=(None, None, 3),  # new dataset is grey-scale image
-            weights=None,
+            weights='imagenet',
             pooling='avg'
         ),
         tf.keras.layers.Dense(15, activation='sigmoid')  # 15 Output for new datasets
@@ -71,13 +71,7 @@ if tf.test.gpu_device_name():
     """
     Check if a GPU is none it's will terminate programs.
     """
-    train_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/train/*.tfrec')
-    val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
-    test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
-
-    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
-    val_dataset = get_dataset(val_filenames, cached=True, color=True)
-
+    
     # =========== Weight & Bias ==============
     run = wandb.init(project="ChestXray",
                     config = {
@@ -86,11 +80,18 @@ if tf.test.gpu_device_name():
                       "loss_function": "binary_crossentropy"
                     })
     config = wandb.config
-    # ========================================
+
     
+    train_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/train/*.tfrec')
+    val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
+    test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
+
+    train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
+    val_dataset = get_dataset(val_filenames, cached=True, color=True)
+
     with STRATEGY.scope():
         tf.keras.backend.clear_session()
-        model = get_resnet50_model()
+        model = get_densenet121_model()
         
         model.compile(
             optimizer='adam',
@@ -100,12 +101,14 @@ if tf.test.gpu_device_name():
     history = model.fit(
         train_dataset,
         epochs=config.epochs,
+        # steps_per_epoch=steps_per_epoch,
         validation_data=val_dataset,
+        # validation_steps=validation_steps,
         verbose=1,
-        callbacks=[WandbCallback()]) # Callback API to Weight & Bias
+        callbacks=[WandbCallback()])
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/Resnet50_RGB_epochs-{config.epochs}.h5")
-    print("Saved")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_epochs_{config.epochs}.h5")
+    print("Save Model")
 else:
     print("\n===== Please, install GPU =====")
 # ====================================================================

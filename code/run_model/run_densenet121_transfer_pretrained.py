@@ -12,7 +12,7 @@ import numpy as np
 import os
 
 # ChestXray Required Modules
-from utils import *
+from modules.utils import *
 
 # Weight & Bias
 import wandb
@@ -55,6 +55,7 @@ def get_densenet121_model():
         ),
         tf.keras.layers.Dense(15, activation='sigmoid')  # 15 Output for new datasets
     ])
+    model.layers[0].trainable = False
     return model
 
 
@@ -86,9 +87,6 @@ if tf.test.gpu_device_name():
     val_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/valid/*.tfrec')
     test_filenames = tf.io.gfile.glob(f'{input_path}/data/224x224/test/*.tfrec')
 
-    # steps_per_epoch = count_data_items(train_filenames) // BATCH_SIZE
-    # validation_steps = count_data_items(val_filenames) // BATCH_SIZE
-
     train_dataset = get_dataset(train_filenames, shuffled=False, repeated=False, augmented=False, color=True)
     val_dataset = get_dataset(val_filenames, cached=True, color=True)
 
@@ -104,13 +102,12 @@ if tf.test.gpu_device_name():
     history = model.fit(
         train_dataset,
         epochs=config.epochs,
-        # steps_per_epoch=steps_per_epoch,
         validation_data=val_dataset,
-        # validation_steps=validation_steps,
         verbose=1,
+        # batch_size=BATCH_SIZE,
         callbacks=[WandbCallback()])
 
-    model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_epochs_{config.epochs}.h5")
+    model.save(f"/home/jovyan/ChestXray-14/results/models/Densenet121_Transfer_Pretrained_epochs_{config.epochs}.h5")
     print("Save Model")
 else:
     print("\n===== Please, install GPU =====")
