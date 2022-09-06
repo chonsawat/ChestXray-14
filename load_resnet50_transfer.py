@@ -79,7 +79,7 @@ if tf.test.gpu_device_name():
         model = get_resnet50_model()
 
         model.compile(
-            optimizer='adam',
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
             loss='binary_crossentropy',
             metrics=tf.keras.metrics.AUC(multi_label=True))
         
