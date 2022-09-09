@@ -7,7 +7,6 @@ import tensorflow as tf
 warnings.filterwarnings('ignore')
 
 
-STRATEGY = tf.distribute.get_strategy()    
 BATCH_SIZE = 16
 IMG_SIZE = 224
 SEED = 42
@@ -125,10 +124,8 @@ def get_dataset(filenames, cached=False):
     dataset = dataset.map(read_tfrecord_color, num_parallel_calls=auto)
         
     dataset = dataset.map(scale_image, num_parallel_calls=auto)
-    dataset = dataset.batch(BATCH_SIZE, drop_remainder=True)
+    dataset = dataset.batch(BATCH_SIZE, drop_remainder=False)
     if cached:
         dataset = dataset.cache()
     dataset = dataset.prefetch(auto)
-        
-    print(dataset)
     return dataset
