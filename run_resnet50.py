@@ -3,20 +3,17 @@ Path:
     Elab Path: 
         input_path = "~/ChestXray-14/dataset/ChestXray NIH"
 """
-
-from calendar import EPOCH
-import wandb
 import tensorflow as tf
+import wandb
 from wandb.keras import WandbCallback
 
-from modules.utils import *
 from modules.models import Model
 from modules.dataset import Dataset
 
 # Constant variables
 NAME = "ResNet50"
 EPOCHS = 10
-input_path = "dataset/ChestXray NIH"
+INPUT_PATH = "dataset/ChestXray NIH"
 
 # Wandb
 run = wandb.init(project="Experiment 1",

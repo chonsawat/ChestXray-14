@@ -3,9 +3,9 @@ from tqdm.notebook import tqdm
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-import os
+from modules.dataset import Directory
 
-input_path = "dataset/ChestXray NIH"
+INPUT_PATH = "dataset/ChestXray NIH"
 STRATEGY = tf.distribute.get_strategy()    
 BATCH_SIZE = 16
 IMG_SIZE = 224
@@ -40,8 +40,8 @@ def _serialize_sample(image_id, image, proba):
         'Hernia': tf.train.Feature(int64_list=tf.train.Int64List(value=[proba[14]]))}
     sample = tf.train.Example(features=tf.train.Features(feature=feature))
     return sample.SerializeToString()
-        
-        
+
+
 def serialize_fold(fold, name):
     samples = []
     
@@ -54,23 +54,37 @@ def serialize_fold(fold, name):
     with tf.io.TFRecordWriter(name + '.tfrec') as writer:
         [writer.write(x) for x in samples]
         
-df = pd.read_csv(f"{input_path}/preprocessed_data.csv", index_col=0)
+df = pd.read_csv(f"{INPUT_PATH}/preprocessed_data.csv", index_col=0)
 df = df.astype("int16")
 df = shuffle(df, random_state=SEED)
-df_train = df[:78484] # 70% : 78484 : 179 folds
-df_valid = df[78484:100908] # 20% : 22,424 : 51 fold
-df_test = df[100908:] # 10% : 11,212 : 25 fold
+df1, df2, df3, df4, df5 = np.split(df, 5)
 
-folds = 256
+FOLDS = 112
+Directory().create_folds_folder()
 
-tfrec_path = f'{input_path}/data/224x224/train'
-for i, fold in tqdm(enumerate(np.array_split(df_train, folds)), total=folds):
+# Fold1
+tfrec_path = f'{INPUT_PATH}/data/folds/fold1'
+for i, fold in tqdm(enumerate(np.array_split(df1, FOLDS)), total=FOLDS):
+    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
+
+# Fold2
+tfrec_path = f'{INPUT_PATH}/data/folds/fold2'
+for i, fold in tqdm(enumerate(np.array_split(df2, FOLDS)), total=FOLDS):
+    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
+
+# Fold3
+tfrec_path = f'{INPUT_PATH}/data/folds/fold3'
+for i, fold in tqdm(enumerate(np.array_split(df3, FOLDS)), total=FOLDS):
+    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
+
+# Fold4
+tfrec_path = f'{INPUT_PATH}/data/folds/fold4'
+for i, fold in tqdm(enumerate(np.array_split(df4, FOLDS)), total=FOLDS):
+    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
+
+# Fold5
+tfrec_path = f'{INPUT_PATH}/data/folds/fold5'
+for i, fold in tqdm(enumerate(np.array_split(df5, FOLDS)), total=FOLDS):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
     
-tfrec_path = f'{input_path}/data/224x224/valid'
-for i, fold in tqdm(enumerate(np.array_split(df_valid, folds)), total=folds):
-    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
-
-tfrec_path = f'{input_path}/data/224x224/test'
-for i, fold in tqdm(enumerate(np.array_split(df_test, folds)), total=folds):
-    serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
+print("Done Preparing!!")
