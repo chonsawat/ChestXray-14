@@ -5,10 +5,9 @@ if __name__ == '__main__':
 else: 
     from modules.utils import get_dataset
 
+INPUT_PATH = "dataset/ChestXray NIH"
 
 class Dataset:
-    INPUT_PATH = "dataset/ChestXray NIH"
-
     def get_train(self):
         filenames = tf.io.gfile.glob(f'{self.INPUT_PATH}/data/224x224/train/*.tfrec')
         dataset = get_dataset(filenames)
@@ -34,7 +33,7 @@ class Dataset:
         dataset = get_dataset(filenames)
         return dataset
     
-    def get_kfold(self, fold_number:int):
+    def get_kfold(self, fold_number:int, sample=False):
         """Get dataset for given fold number as test dataset
 
         Parameters
@@ -55,7 +54,11 @@ class Dataset:
         train_filenames = []
         test_filenames = []
         for folder in folders:
-            filenames = tf.io.gfile.glob(f'{INPUT_PATH}/data/folds/{folder}/*.tfrec')
+            if sample:
+                filenames = tf.io.gfile.glob(f'{INPUT_PATH}/data/sample_folds/{folder}/*.tfrec')
+            else:
+                filenames = tf.io.gfile.glob(f'{INPUT_PATH}/data/folds/{folder}/*.tfrec')
+
             if folder == f"fold{fold_number}":
                 test_filenames = test_filenames + filenames
             else:
@@ -82,6 +85,5 @@ class Directory():
         os.makedirs(os.path.join(INPUT_PATH, "data", "sample_folds", "fold5"), exist_ok=True)
 
 if __name__ == '__main__':
-    INPUT_PATH = "dataset/ChestXray NIH"
     Directory().create_folds_folder()
     print("Done")
