@@ -3,6 +3,7 @@ a module for create a model easier for experimental
 """
 
 import tensorflow as tf
+import tensorflow_addons as tfa
 
 class Model:
     """ Use for create a different transfer learning model
@@ -19,7 +20,11 @@ class Model:
     def __init__(self, transfer_model):
         self.optimizer = tf.keras.optimizers.Adam()
         self.loss = tf.keras.losses.BinaryCrossentropy(from_logits=True)
-        self.metrics = [tf.keras.metrics.AUC(multi_label=True)]
+        self.metrics = [tf.keras.metrics.AUC(multi_label=True),
+                        tf.keras.metrics.Precision(thresholds=0),
+                        tf.keras.metrics.Recall(thresholds=0),
+                        tfa.metrics.F1Score(num_classes=15,
+                                            threshold=0.5)]
         self.transfer = transfer_model
         self.model = None
         
@@ -31,6 +36,12 @@ class Model:
         """        
         self.model = tf.keras.Sequential([
             self.transfer,
+            tf.keras.layers.Dense(128, activation="relu"),
+            tf.keras.layers.Dense(128, activation="relu"),
+            tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dense(32, activation="relu"),
+            tf.keras.layers.Dense(32, activation="relu"),
             tf.keras.layers.Dense(15, activation='sigmoid')]
         )
     
