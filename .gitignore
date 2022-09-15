@@ -7,3 +7,5 @@ __pycache__
 wandb
 results/models/*
 ~/
+
+Server.ipynb
