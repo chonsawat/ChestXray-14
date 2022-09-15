@@ -25,7 +25,7 @@ transfer_model = tf.keras.applications.resnet50.ResNet50(
 model = Model(transfer_model).get_model()
 
 # Visualize
-best_model = wandb.restore('model.h5', run_path="chestxray/Experiment 2/9rkc5pvu")
+best_model = wandb.restore('model-best.h5', run_path="chestxray/Experiment 2/9rkc5pvu")
 model.load_weights(best_model.name)
     
 model.save("results/models/resnet50_fold1.h5")
