@@ -11,7 +11,6 @@ BATCH_SIZE = 16
 IMG_SIZE = 224
 SEED = 42
 
-
 feature_map = {
     'image': tf.io.FixedLenFeature([], tf.string),
     'image_id': tf.io.FixedLenFeature([], tf.string),

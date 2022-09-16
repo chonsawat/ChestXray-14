@@ -6,6 +6,7 @@ else:
     from modules.utils import get_dataset
 
 INPUT_PATH = "dataset/ChestXray NIH"
+LABELS = ['No Finding', 'Atelectasis', 'Consolidation', 'Infiltration', 'Pneumothorax', 'Edema', 'Emphysema', 'Fibrosis', 'Effusion', 'Pneumonia', 'Pleural_Thickening', 'Cardiomegaly', 'Nodule', 'Mass', 'Hernia']
 
 class Dataset:
     def get_train(self):
