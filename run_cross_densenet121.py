@@ -13,12 +13,12 @@ NUM_FOLDS = 5
 dataset = Dataset()
 for fold_num in range(1, NUM_FOLDS + 1):
     # WandbCallback
-    run = wandb.init(project="Experiment 2",
-                     name=f"{NAME} using fold {fold_num} as test dataset",
+    run = wandb.init(project="Experiment 3",
+                     name=f"{NAME} using fold {fold_num} as test dataset (weight=imagenet)",
                      reinit=True)
     
     # Dataset
-    train_dataset, test_dataset = dataset.get_kfold(fold_num, sample=True)
+    train_dataset, test_dataset = dataset.get_kfold(fold_num, sample=False)
     
     # Modeling
     transfer_model = tf.keras.applications.densenet.DenseNet121(
@@ -38,4 +38,3 @@ for fold_num in range(1, NUM_FOLDS + 1):
             verbose=1,
             callbacks=[WandbCallback()]
     )
-    break

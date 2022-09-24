@@ -6,7 +6,7 @@ from modules.dataset import Dataset
 from modules.models import Model
 
 # Constant variables
-NAME = "Resnet50"
+NAME = "EfficientNetB0"
 EPOCHS = 10
 NUM_FOLDS = 5
 
@@ -21,7 +21,7 @@ for fold_num in range(1, NUM_FOLDS + 1):
     train_dataset, test_dataset = dataset.get_kfold(fold_num, sample=False)
     
     # Modeling
-    transfer_model = tf.keras.applications.resnet50.ResNet50(
+    transfer_model = tf.keras.applications.efficientnet.EfficientNetB0(
         include_top=False, 
         weights='imagenet',
         input_shape=(224, 224, 3),
