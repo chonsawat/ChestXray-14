@@ -18,7 +18,7 @@ dataset = Dataset()
 for fold_num in range(1, NUM_FOLDS + 1):
     # WandbCallback
     run = wandb.init(project="Experiment 3",
-                     name=f"{NAME} using fold {fold_num} as test dataset (weight=imagenet)",
+                     name=f"{NAME} using fold {fold_num} as test dataset (weight={weight_option})",
                      reinit=True)
     
     # Dataset
