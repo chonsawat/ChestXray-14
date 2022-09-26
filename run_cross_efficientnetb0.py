@@ -4,6 +4,7 @@ from wandb.keras import WandbCallback
 
 from modules.dataset import Dataset
 from modules.models import Model
+from modules.parser import parse_option
 
 option = parse_option()
 weight_option = 'imagenet' if option.imagenet else None
