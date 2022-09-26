@@ -5,6 +5,9 @@ from wandb.keras import WandbCallback
 from modules.dataset import Dataset
 from modules.models import Model
 
+option = parse_option()
+weight_option = 'imagenet' if option.imagenet else None
+
 # Constant variables
 NAME = "EfficientNetB0"
 EPOCHS = 10
@@ -23,7 +26,7 @@ for fold_num in range(1, NUM_FOLDS + 1):
     # Modeling
     transfer_model = tf.keras.applications.efficientnet.EfficientNetB0(
         include_top=False, 
-        weights='imagenet',
+        weights=weight_option,
         input_shape=(224, 224, 3),
         pooling=None
     )
