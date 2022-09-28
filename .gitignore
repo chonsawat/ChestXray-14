@@ -6,6 +6,9 @@ __pycache__
 
 wandb
 results/models/*
+results/models
 ~/
 
 Server.ipynb
+ChestXray-14/results/models
+ChestXray-14/results/models/*
