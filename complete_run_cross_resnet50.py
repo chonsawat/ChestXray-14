@@ -22,18 +22,19 @@ def lr_schedule(epoch, learning_rate):
     tf.summary.scalar('learning rate', data=learning_rate, step=epoch)
     return learning_rate
 
-# Model Checkpoint
-model_checkpoint_callback = ModelCheckpoint(f'results/models/{NAME}.h5', monitor='val_loss', mode='min', save_best_only=True)
-early_stop_callback = EarlyStopping(monitor='val_loss', mode="min", patience=20, verbose=1)
-reduce_lr_callback = ReduceLROnPlateau(monitor='val_loss', mode="min", factor=0.5, patience=5, verbose=1)
-lr_logging_callback = LearningRateScheduler(lr_schedule)
-
 dataset = Dataset()
 for fold_num in range(1, NUM_FOLDS + 1):
     # WandbCallback
-    run = wandb.init(project="Experiment 3",
+    run = wandb.init(project="Experiment 4",
                      name=f"{NAME} using fold {fold_num} as test dataset (weight={weight_option}) - Complete",
                      reinit=True)
+
+    # Model Checkpoint
+    model_checkpoint_callback = ModelCheckpoint(f'results/models/{NAME}_fold_{fold_num}.h5', monitor='val_loss', mode='min', save_best_only=True)
+    early_stop_callback = EarlyStopping(monitor='val_loss', mode="min", patience=20, verbose=1)
+    reduce_lr_callback = ReduceLROnPlateau(monitor='val_loss', mode="min", factor=0.5, patience=3, verbose=1)
+    lr_logging_callback = LearningRateScheduler(lr_schedule)
+    
     # CSV Logger
     path = os.path.join("results", "history", NAME)
     os.makedirs(path, exist_ok=True)
