@@ -12,7 +12,7 @@ weight_option = 'imagenet' if option.imagenet else None
 
 # Constant variables
 NAME = "Resnet50"
-EPOCHS = 10
+EPOCHS = 100
 NUM_FOLDS = 5
 
 # Learning rate
