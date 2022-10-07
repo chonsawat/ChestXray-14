@@ -13,7 +13,7 @@ option = parse_option()
 weight_option = 'imagenet' if option.imagenet else None
 
 # Constant variables
-NAME = "Resnet50"
+NAME = "EfficientNetB0"
 EPOCHS = 100
 NUM_FOLDS = 5
 
@@ -30,13 +30,13 @@ for fold_num in range(1, NUM_FOLDS + 1):
                      reinit=True)
 
     # Model Checkpoint
-    model_checkpoint_callback = ModelCheckpoint(f'results/models/{NAME}_fold_{fold_num}.h5', monitor='val_loss', mode='min', save_best_only=True)
+    model_checkpoint_callback = ModelCheckpoint(f'results/models/{NAME}_{weight_option}_fold_{fold_num}.h5', monitor='val_loss', mode='min', save_best_only=True)
     early_stop_callback = EarlyStopping(monitor='val_loss', mode="min", patience=20, verbose=1)
     reduce_lr_callback = ReduceLROnPlateau(monitor='val_loss', mode="min", factor=0.5, patience=3, verbose=1)
     lr_logging_callback = LearningRateScheduler(lr_schedule)
     
     # CSV Logger
-    path = os.path.join("results", "history", f"{NAME}_(weight={weight_option})")
+    path = os.path.join("results", "history", f"{NAME}_{weight_option}")
     os.makedirs(path, exist_ok=True)
     csv_logger = CSVLogger(os.path.join(path, f"fold_{fold_num}.csv"))
     
@@ -44,7 +44,7 @@ for fold_num in range(1, NUM_FOLDS + 1):
     train_dataset, test_dataset = dataset.get_kfold(fold_num, sample=False)
     
     # Modeling
-    transfer_model = tf.keras.applications.resnet50.ResNet50(
+    transfer_model = tf.keras.applications.efficientnet.EfficientNetB0(
         include_top=False, 
         weights=weight_option,
         input_shape=(224, 224, 3),
