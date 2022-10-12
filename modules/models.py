@@ -63,3 +63,20 @@ class Model:
         self.compile_model()
         return self.model
     
+    def get_dropout_model(self):
+        sequential_list = [
+            self.transfer,
+            tf.keras.layers.Flatten(),
+            tf.keras.layers.Dense(128, activation="relu"),
+            tf.keras.layers.Dense(128, activation="relu"),
+            tf.keras.layers.Dropout(0.5),
+            
+            tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dropout(0.5),
+            
+            tf.keras.layers.Dense(15, activation='sigmoid')
+        ]
+        self.model = tf.keras.Sequential(sequential_list)
+        self.compile_model()
+        return self.model
