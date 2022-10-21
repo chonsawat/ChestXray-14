@@ -17,32 +17,32 @@ df = df.astype("int16")
 df = shuffle(df, random_state=SEED)
 df1, df2, df3, df4, df5 = np.split(df, 5)
 
-FOLDS = 112
+NUM_FILES = 112
 Directory().create_folds_folder()
 
 # Fold1
 tfrec_path = f'{INPUT_PATH}/data/folds/fold1'
-for i, fold in tqdm(enumerate(np.array_split(df1, FOLDS)), total=FOLDS):
+for i, fold in tqdm(enumerate(np.array_split(df1, NUM_FILES)), total=NUM_FILES):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
 
 # Fold2
 tfrec_path = f'{INPUT_PATH}/data/folds/fold2'
-for i, fold in tqdm(enumerate(np.array_split(df2, FOLDS)), total=FOLDS):
+for i, fold in tqdm(enumerate(np.array_split(df2, NUM_FILES)), total=NUM_FILES):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
 
 # Fold3
 tfrec_path = f'{INPUT_PATH}/data/folds/fold3'
-for i, fold in tqdm(enumerate(np.array_split(df3, FOLDS)), total=FOLDS):
+for i, fold in tqdm(enumerate(np.array_split(df3, NUM_FILES)), total=NUM_FILES):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
 
 # Fold4
 tfrec_path = f'{INPUT_PATH}/data/folds/fold4'
-for i, fold in tqdm(enumerate(np.array_split(df4, FOLDS)), total=FOLDS):
+for i, fold in tqdm(enumerate(np.array_split(df4, NUM_FILES)), total=NUM_FILES):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
 
 # Fold5
 tfrec_path = f'{INPUT_PATH}/data/folds/fold5'
-for i, fold in tqdm(enumerate(np.array_split(df5, FOLDS)), total=FOLDS):
+for i, fold in tqdm(enumerate(np.array_split(df5, NUM_FILES)), total=NUM_FILES):
     serialize_fold(fold, name=f'{tfrec_path}/{i:03d}-{len(fold):03d}')
     
 print("Done Preparing!!")
