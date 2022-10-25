@@ -25,9 +25,9 @@ def lr_schedule(epoch, learning_rate):
 dataset = Dataset()
 for fold_num in range(1, NUM_FOLDS + 1):
     # WandbCallback
-    run = wandb.init(project="Experiment 4",
-                     name=f"{NAME} using fold {fold_num} as test dataset (weight={weight_option}) - Complete",
-                     reinit=True)
+    # run = wandb.init(project="Experiment 4",
+    #                  name=f"{NAME} using fold {fold_num} as test dataset (weight={weight_option}) - Complete",
+    #                  reinit=True)
 
     # Model Checkpoint
     model_checkpoint_callback = ModelCheckpoint(f'results/models/{NAME}_{weight_option}_fold_{fold_num}.h5', monitor='val_loss', mode='min', save_best_only=True)
@@ -59,8 +59,8 @@ for fold_num in range(1, NUM_FOLDS + 1):
         epochs=EPOCHS,
         validation_data=test_dataset,
         verbose=1,
-        callbacks=[WandbCallback(), model_checkpoint_callback, csv_logger, early_stop_callback, reduce_lr_callback, lr_logging_callback],
-        # callbacks=[model_checkpoint_callback, csv_logger, early_stop_callback, reduce_lr_callback, lr_logging_callback]
+        # callbacks=[WandbCallback(), model_checkpoint_callback, csv_logger, early_stop_callback, reduce_lr_callback, lr_logging_callback],
+        callbacks=[model_checkpoint_callback, csv_logger, early_stop_callback, reduce_lr_callback, lr_logging_callback]
     )
     
     # break
