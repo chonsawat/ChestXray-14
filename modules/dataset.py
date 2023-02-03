@@ -5,7 +5,7 @@ if __name__ == '__main__':
 else: 
     from modules.utils import get_dataset
 
-INPUT_PATH = "dataset/ChestXray NIH"
+INPUT_PATH = "/home/jovyan/ChestXray-14/dataset/ChestXray NIH"
 LABELS = ['No Finding', 'Atelectasis', 'Consolidation', 'Infiltration', 'Pneumothorax', 'Edema', 'Emphysema', 'Fibrosis', 'Effusion', 'Pneumonia', 'Pleural_Thickening', 'Cardiomegaly', 'Nodule', 'Mass', 'Hernia']
 
 class Dataset:
