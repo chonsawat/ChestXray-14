@@ -84,7 +84,11 @@ class Directory():
         os.makedirs(os.path.join(INPUT_PATH, "data", "sample_folds", "fold3"), exist_ok=True)
         os.makedirs(os.path.join(INPUT_PATH, "data", "sample_folds", "fold4"), exist_ok=True)
         os.makedirs(os.path.join(INPUT_PATH, "data", "sample_folds", "fold5"), exist_ok=True)
+        
+    def create_sampling_data_folder(self):
+        os.makedirs(os.path.join(INPUT_PATH, "data", "sampling"), exist_ok=True)
 
 if __name__ == '__main__':
     Directory().create_folds_folder()
+    Directory().create_sampling_data_folder()
     print("Done")
