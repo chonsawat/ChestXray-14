@@ -12,3 +12,6 @@ results/models
 Server.ipynb
 ChestXray-14/results/models
 ChestXray-14/results/models/*
+
+run_specific_fold/results/models/facal_loss/EfficientNetB0_None_fold_3.h5
+run_specific_fold/results/history/training_with_facal_loss/dropout_20/EfficientNetB0_None/EfficientNetB0_None_fold_3.h5

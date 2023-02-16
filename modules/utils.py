@@ -171,3 +171,16 @@ def serialize_fold(fold, name):
     
     with tf.io.TFRecordWriter(name + '.tfrec') as writer:
         [writer.write(x) for x in samples]
+        
+def serialize_sampling(data, name):
+    samples = []
+    
+    for index, proba in data.iterrows():
+        # print(index)
+        samples.append(_serialize_sample(
+            index.split('/')[-1].encode(), 
+            _serialize_image(index), 
+            proba))
+    
+    with tf.io.TFRecordWriter(name + '.tfrec') as writer:
+        [writer.write(x) for x in samples]
