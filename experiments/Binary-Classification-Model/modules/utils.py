@@ -14,7 +14,7 @@ SEED = 42
 feature_map = {
     'image': tf.io.FixedLenFeature([], tf.string),
     'image_id': tf.io.FixedLenFeature([], tf.string),
-    'No Finding': tf.io.FixedLenFeature([], tf.int16)
+    'No Finding': tf.io.FixedLenFeature([], tf.int64)
 }
 
 
