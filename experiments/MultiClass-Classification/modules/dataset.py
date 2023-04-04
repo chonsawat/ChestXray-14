@@ -7,7 +7,7 @@ else:
 
 ROOT_PATH = "/home/jovyan/ChestXray-14"
 INPUT_PATH = f"{ROOT_PATH}/dataset/ChestXray NIH"
-LABELS = ["Infiltration", "Atelectasis","Effusion"]
+LABELS = ["Infiltration", "Atelectasis","Effusion", "No Finding"]
 
 class Dataset:
     
@@ -24,7 +24,7 @@ class Dataset:
         tuple
             tuple of (train, test) datasets
         """        
-        experiment_dataset_path = "data/multiclass"
+        experiment_dataset_path = "data/multiclass_dataset"
         folders = os.listdir(f"{INPUT_PATH}/{experiment_dataset_path}/folds")
         assert \
             fold_number > 0 and fold_number <= len(folders), \
