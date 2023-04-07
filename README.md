@@ -2,6 +2,15 @@
 *Multi-label Classification of Lung Diseases from Chest X-Ray Images* <br>
 Since: Jul 2021 - Present
 
+**Requirements**
+- Python: 3.10.5
+
+**Important note**
+- This repository doesn't allow pull requests to merge into any branch.
+- This repository doesn't allow you to add contributors.
+
+<br>
+
 **Collaborators** <br>
 
 <a href="https://www.linkedin.com/in/chonsawat-nakanam/" target="_blank"> 
