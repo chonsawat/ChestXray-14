@@ -14,7 +14,6 @@ weight_option = 'imagenet' if option.imagenet else None
 NAME = "EfficientNetB0"
 EPOCHS = 100
 NUM_FOLDS = 5
-ROOT_PATH = os.path.abspath(".")
 
 # Learning rate
 def lr_schedule(epoch, learning_rate):

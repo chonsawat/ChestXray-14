@@ -5,7 +5,9 @@ if __name__ == '__main__':
 else: 
     from modules.utils import get_dataset
 
-ROOT_PATH = "/home/jovyan/ChestXray-14"
+ROOT_PATH = os.path.abspath(".") # "<YOUR_PROJECT_PATH>/ChestXray-14" i.e. "/home/jovyan/ChestXray-14"
+print("ROOT_PATH:", ROOT_PATH)
+
 INPUT_PATH = f"{ROOT_PATH}/dataset/ChestXray NIH"
 LABELS = ['No Finding', 'Atelectasis', 'Consolidation', 'Infiltration', 'Pneumothorax', 'Edema', 'Emphysema', 'Fibrosis', 'Effusion', 'Pneumonia', 'Pleural_Thickening', 'Cardiomegaly', 'Nodule', 'Mass', 'Hernia']
 
