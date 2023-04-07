@@ -34,9 +34,13 @@ class Model:
             self.transfer,
             tf.keras.layers.Flatten(),
             tf.keras.layers.Dense(128, activation="relu"),
+            tf.keras.layers.Dropout(0.15),
             tf.keras.layers.Dense(128, activation="relu"),
+            
             tf.keras.layers.Dense(64, activation="relu"),
+            tf.keras.layers.Dropout(0.15),
             tf.keras.layers.Dense(64, activation="relu"),
+            
             tf.keras.layers.Dense(4, activation='softmax')
         ]
         self.model = tf.keras.Sequential(sequential_list)
