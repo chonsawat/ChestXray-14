@@ -1,3 +1,7 @@
+"""
+    ROOT_PATH : Path to root of this project
+"""
+
 import os
 import tensorflow as tf
 if __name__ == '__main__': 
@@ -5,9 +9,12 @@ if __name__ == '__main__':
 else: 
     from modules.utils import get_dataset
 
-ROOT_PATH = "/home/jovyan/ChestXray-14"
+ROOT_PATH = os.path.abspath("../..") # example: "/home/jovyan/ChestXray-14"
 INPUT_PATH = f"{ROOT_PATH}/dataset/ChestXray NIH"
-LABELS = ["Infiltration", "Atelectasis","Effusion"]
+LABELS = ['No Finding']
+
+print("ROOT_PATH:", ROOT_PATH)
+print("INPUT_PATH:", INPUT_PATH)
 
 class Dataset:
     
@@ -24,7 +31,7 @@ class Dataset:
         tuple
             tuple of (train, test) datasets
         """        
-        experiment_dataset_path = "data/multiclass"
+        experiment_dataset_path = "data/binary_dataset"
         folders = os.listdir(f"{INPUT_PATH}/{experiment_dataset_path}/folds")
         assert \
             fold_number > 0 and fold_number <= len(folders), \
