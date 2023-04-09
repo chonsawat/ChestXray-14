@@ -1,0 +1,16 @@
+label,thresholds,f1_most
+No Finding,-1e-07,0.26630145
+Atelectasis,-1e-07,0.32147133
+Consolidation,-1e-07,0.14519331
+Infiltration,-1e-07,0.49927342
+Pneumothorax,-1e-07,0.16582538
+Edema,-1e-07,0.0702203
+Emphysema,-1e-07,0.080039136
+Fibrosis,-1e-07,0.05027822
+Effusion,-1e-07,0.34664646
+Pneumonia,-1e-07,0.046395857
+Pleural_Thickening,-1e-07,0.10305491
+Cardiomegaly,-1e-07,0.08154087
+Nodule,-1e-07,0.19567816
+Mass,-1e-07,0.16907717
+Hernia,-1e-07,0.0062995325
