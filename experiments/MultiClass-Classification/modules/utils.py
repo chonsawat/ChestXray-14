@@ -79,7 +79,7 @@ def read_tfrecord_color(example):
         example['Infiltration'],
         example['Effusion'],
         example['Atelectasis'],
-        example['No Finding'],
+        example['Atelectasis'],
     ]
     return image, target
 
