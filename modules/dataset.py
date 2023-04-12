@@ -6,6 +6,10 @@ else:
     from modules.utils import get_dataset
 
 ROOT_PATH = os.path.abspath(".") # "<YOUR_PROJECT_PATH>/ChestXray-14" i.e. "/home/jovyan/ChestXray-14"
+if ROOT_PATH.split("/")[-1] != "ChestXray-14":
+    PROJECT_INDEX = ROOT_PATH.split("/").index("ChestXray-14")
+    ROOT_PATH = ([ "/" if not i else i for i in ROOT_PATH.split("/")][:PROJECT_INDEX+1])
+    ROOT_PATH = os.path.join(*ROOT_PATH)
 print("ROOT_PATH:", ROOT_PATH)
 
 INPUT_PATH = f"{ROOT_PATH}/dataset/ChestXray NIH"
