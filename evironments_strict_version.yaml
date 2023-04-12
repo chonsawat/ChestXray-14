@@ -1,4 +1,4 @@
-name: cxr
+name: base
 channels:
   - conda-forge
 dependencies:
@@ -651,4 +651,4 @@ dependencies:
     - werkzeug==2.2.2
     - wrapt==1.14.1
     - yarg==0.1.9
-    
+prefix: /opt/conda
