@@ -1,6 +1,7 @@
 # ChestXray-14
 *Multi-label Classification of Lung Diseases from Chest X-Ray Images* <br>
-Since: Jul 2021 - Present
+Since: Jul 2021 - 2023
+Readme: This repository was no-longer update.
 
 **Requirements**
 - Python: 3.10.5
@@ -12,7 +13,6 @@ Since: Jul 2021 - Present
 <br>
 
 **Collaborators** <br>
-
 <a href="https://www.linkedin.com/in/chonsawat-nakanam/" target="_blank"> 
     <img src="https://img.shields.io/badge/Chonsawat Nakanam-ffffff?style=for-the-badge&logo=LinkedIn&logoColor=black"> 
 </a>
