@@ -1,7 +1,7 @@
 # ChestXray-14
 *Multi-label Classification of Lung Diseases from Chest X-Ray Images* <br>
-Since: Jul 2021 - 2023
-Readme: This repository was no-longer update.
+Since: Jul 2021 - 2023 <br>
+Readme: This repository was **no-longer update**.
 
 **Requirements**
 - Python: 3.10.5
